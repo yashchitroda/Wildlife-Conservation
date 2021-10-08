@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE TAPIR</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(133,0,99);
+}
+
+.carousel {
+  background: rgb(133,0,99);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">TAPIR</h1>
+<img src="../images/tapir.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+A pig? An anteater?" No, it's a tapir, a primitive animal that has remained largely unchanged for millions of years. The four types of tapir are most closely related to horses and rhinos, since they have an odd number of toes (four toes on each front foot, three on each back foot). Their eyes and ears are small, and the body is teardrop shaped: tapered in the front and wider at the rear, designed to walk through thick vegetation. Male tapirs are slightly smaller than females.
+<br><br>
+The tapir's nose and upper lip combine into a flexible snout like an elephant's trunk. It can be used as a snorkel when the tapir is underwater and as an effective tool to detect odors wafting through the dense forest. This prehensile mini-trunk (by elephant standards!) is used to grab branches and strip off the leaves or to help pluck fruit and put it directly in the tapir's mouth. It also adds an air of mystery to the tapir-at first glance, it's hard to tell just what this creature is!
+<br><br>
+As key wildlife in shaping and maintaining the biological diversity of tropical forests, tapirs are vital components in their ecosystems. They are masters at dispersing seeds and leaving them well fertilized, providing themselves and other wildlife with an ongoing supply of food and shelter. A recent study of lowland tapirs in Peru revealed 122 different seeds in their dung!
+<br><br>
+Tapirs live in wetlands, forests, savanna, and rainforests, and they have a range that includes Mexico, Central America, South America, and Southeast Asia's Malaya and Sumatra. Tapirs prefer wooded or grassy areas with places to shelter during the day and a lake, river, or pond for taking a nighttime dip. Their toes are splayed to help create traction in the slippery mud on shorelines and hillsides. Barrel-shaped, with short, bristly hair, tapirs are surprisingly nimble and are excellent at scrambling up steep riverbanks. They can also run and swim. It is thought they walk along river bottoms, much like hippos do. When frightened, tapirs can take to the water and breathe with their snout poked above the surface like a snorkel. Large cats and crocodiles are natural tapir predators. However, adult tapirs can deter predators with their tough hide, and by snapping and biting.
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/critically endangered.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Critically Endangered </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Tapiridae </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br>3000 - 4000 left</p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 2 m (6.6 ft) long  </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br>  weigh between 150 and 300 kg </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="tapir habitat.html"> RAINFORESTS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/tapir map.jpg">
+<figcaption style="color: white; font-size: 35px;"> HABITAT MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/tapir1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/tapir1.jpg"/>
+        <h1 align="center" style="color: magenta;">IMPORTANCE OF TAPIR</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Tapirs are important recyclers of nutrients, helping the soil and landscape thrive. They also serve as biological indicators of the health and vitality of an area: </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/tapir2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/tapir2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+Tapirs are best suited for life in primary or old-growth forests with plenty of permanent water sources, which humans tend to "repurpose" for farms, roads, and development.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/tapir3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/tapir3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Tapirs like to spend a lot of time in the water, eating aquatic plants, cooling off, or washing away skin parasites.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/v4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/tapir4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">They can stay underwater for several minutes. Even youngsters are able to swim when just a few days old. Primarily active at dawn and dusk when it's cooler, many tapirs are active throughout the night, foraging for grasses, plants, and fruits.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/tapir5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/tapir5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;"> Baird's or Central American tapirs are also hunted for sport in Costa Rica. And as humans clear the tapir's habitats for farming, cattle grazing, palm oil and rubber plantations, or the growing of poppies for the opium trade, the tapir's food supply decreases. </p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>

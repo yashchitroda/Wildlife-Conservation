@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE ORYX</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(214,123,42);
+}
+
+.carousel {
+  background: rgb(214,123,42);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">ARABIAN ORYX</h1>
+<img src="../images/oryx.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+  This species used to be found across much of the Arabian Peninsula, but had become extinct in the wild by 1972. Since then, they have been reintroduced into the wild in Israel, Oman, Saudi Arabia, Jordan and United Arab Emirates. There is also a small population in Bahrain as well as semi-managed populations in Qatar, United Arab Emirates and Saudi Arabia.  Arabian oryx live in a variety of desert habitats including stony plains, wadis and sand dunes.  They are adapted to be able to survive harsh climates with low rainfall, high winds, temperatures of over 45° C and even droughts of up to six months. 
+  <br><br>
+  The main predators of Arabian oryx are thought to be jackals, which prey on calves.
+  <br><br>
+Arabian oryx became extinct in the wild due to hunting for their meat, hides and horns. The second world war led to an influx of automatic rifles and high speed motor vehicles to the Arabian peninsula, and this led to unsustainable levels of hunting of the oryx.
+<br><br>
+By 1965 there were less than 500 Arabian oryx left in the wild. In the 1950s captive herds were established and several were sent to the United States where a breeding program was set up. Today over 1000 Arabian oryx have been released into the wild, and almost all of these animals are in protected areas. The oryx are legally protected in all the countries they have been reintroduced to. In addition, there is a well managed and large breeding population of Arabian oryx in captivity, and they are listed on CITES Appendix I which means that trade in these animals or any of their parts is illegal. However, this species remains under threat from illegal hunting, overgrazing and droughts.
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/near threatened.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Near Threatened </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Oryx leucoryx </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br> 6000-7000    </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> An Arabian oryx stands about 1 m (39 in) </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 70 kg (150 lb) </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="oryx habitat.html"> DESERTS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/oryx map.jpg" width="700" height="500">
+<figcaption style="color: white; font-size: 35px;">HABITAT MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/oryx1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/oryx1.jpg"/>
+        <h1 align="center" style="color: orange;">IMPORTANCE OF ORYX</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+The Arabian oryx is amongst the largest desert mammals of the Arab region and throughout history has been an important aspect of its heritage</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/oryx2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/oryx2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+ They experience high morbidity during transit, making collection for the pet trade an even greater threat to their survival. In South America, natives use oryx carapaces to make musical instruments. These instruments, which are called charongos, are similar to mandolins.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/oryx3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/oryx3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">The Arabian oryx is the national animal of Jordan, Oman, the United Arab Emirates, Bahrain, and Qatar.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/oryx4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/oryx4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Male oryx will use their long horns to fight other males for dominance in the herd. </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/oryx5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/oryx5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;">When the weather is hottest, oryx will spend most of the day sheltering in shade and forage for food at night. In cooler weather they bask in the sun and feed during the day to keep warm.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE FLAMINGO</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(16,64,299);
+}
+
+.carousel {
+  background: rgb(16,64,299);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">FLAMINGO</h1>
+<img src="../images/flamingo.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+A flamingo's plumage is a distinctive pink color with black flight feathers along the edges of the wings. It has a slender body and very long legs, a long, flexible neck and a small head. The flamingo's bill has a characteristic downward bend.
+<br><br>
+Compared with its long legs, a flamingo's feet are relatively small. The front three toes are webbed, and the back toe is either tiny or missing altogether. Flamingos walk easily and can run when threatened.
+<br><br>
+Breeding displays occur in large groups with, at times, thousands of individuals opening their wings or lifting up and turning their heads in one vast, synchronized movement. Theses group displays seem to bring all the birds of the colony to the same readiness to mate, to ensure rapid, synchronized egg laying as soon as conditions allow.
+<br><br>
+These flamingos eat algae, small seeds and aquatic invertebrates such as brine, fly larvae, shrimp and mollusks. Flamingos usually feed while wading in shallows, using their feet to stir up mud on the bottom. They put their head to the surface (so that the bill is upside-down, with the tip pointing backward) and sweeps their head from side to side.
+<br><br>
+By a rapid action of the tongue, they pump water in and out of the slightly opened bill. The way in which the upper and lower parts of the bill fit together, combined with the comb-like plates on the bill's edges, make it a useful tool for sieving food from water.
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/near threatened.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Near Threatened </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Phoenicopterus roseus </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br> 51,000-53,000 </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 3.9 to 4.7 feet (1.2 to 1.4 m) </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> up to 7.7 pounds (3.5 kg)  </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="flamingo habitat.html">LAKES</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/flamingo map.jpg">
+<figcaption style="color: white; font-size: 35px;">HABITAT MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/flamingo1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/flamingo1.jpg"/>
+        <h1 align="center" style="color: blue;">IMPORTANCE OF FLAMINGO</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Flamingos feed in shallow bodies of water, and often use their large feet to stir organisms from the bottom up into the water column. This activity likely contributes to sufficient oxygenation and mixing of organic material within these bodies of water and aids in avoiding anoxic conditions.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/flamingo2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/flamingo2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+The most prominent threats to flamingos include predators, habitat loss, and illegal poaching for decorative feathers. In some areas, humans illegally hunt flamingos to gather eggs as food or to harvest their tongues as meat.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/flamingo3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/flamingo3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">It is believed this is due to various types of bacteria and toxins that have developed in the water. This is often the result of chemicals, toxins, and pollution in the water due to humans.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/flamingo4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/flamingo4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">While flamingos are an abundant bird species, they are threatened by habitat loss due to mineral mining and human disturbance</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/flamingo5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/flamingo5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;"> Some of the predators of these birds include eagles, vultures, kites, storks, raccoons, Geoffrey's cats, feral pigs, and foxes</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>

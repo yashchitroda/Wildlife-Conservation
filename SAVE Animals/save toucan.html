@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE TOUCAN</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(133,0,99);
+}
+
+.carousel {
+  background: rgb(133,0,99);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">TOUCAN</h1>
+<img src="../images/toucan.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+  A toucan's bill is sharp and has saw-like edges. The bill is used to squash the many kinds of fruit and berries he eats. He may also use the saw-like edges to tear off parts of larger fruits. Also included in their diet are small birds and lizards. Toucans make their homes in holes in trees. They usually live in pairs or small flocks. White, glossy eggs are laid once a year and when they hatch, the new chicks have no down covering them.  Toucans are found in South and Central America in the canopy layer of the rainforest. When they sleep, they turn thier heads around and tuck their bills under their wings and tail. The toucan is very important to the rainforest because they help to disperse seeds from the fruits and berries they eat.
+  <br><br>
+  There are about 40 different kinds of toucans. They vary in size from about 7 inches to a little over two feet. They have short and thick necks. Toucans are distinguished by large, colorful, yet lightweight bills. The color of the bill may be black, blue, brown, green, red, white, yellow or a combination of colors. The bright colors on his bill help to attract a mate. Toucans also have a narrow, feather-like tongue. They can be noisy birds with their calls sounding harsh and raspy.
+
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/critically endangered.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Critically endangered </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Harpia harpyja </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br>10000 left</p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 63.5 cm (25 in.)  </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br>  130-360 gms</p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="toucan habitat.html"> RAINFORESTS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/toucan map.jpg">
+<figcaption style="color: white; font-size: 35px;"> HABITAT MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/toucan1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/toucan1.jpg"/>
+        <h1 align="center" style="color: magenta;">IMPORTANCE OF TOUCAN</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Toucans are important for rainforest health and diversity. These birds pass seeds from the fruit they eat through their digestive systems, which helps replant the plants.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/toucan2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/toucan2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+Its black body and white throat are overshadowed by its most recognizable trait: a large colorful beak. </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/toucan3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/toucan3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">The bright orange beak is about 19 cm (8 in.) long - one third of the bird's total length</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/toucan4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/toucan4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">In addition, the beak houses a flat tongue of the same length, which helps the toucan catch insects, frogs, and reptiles.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/toucan5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/toucan5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;">Toucans are primarily frugivorous (fruit eating), but are opportunistically omnivorous and will take prey such as insects, smaller birds, and small lizards. Captive toucans have been reported to hunt insects actively in their cages, and it is possible to keep toucans on an insect-only diet.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>

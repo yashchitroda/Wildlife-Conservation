@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE KOMODO</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(214,123,42);
+}
+
+.carousel {
+  background: rgb(214,123,42);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">KOMODO DRAGON</h1>
+<img src="../images/komodo.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+Komodo dragons are large lizards with long tails, strong and agile necks, and sturdy limbs. Their tongues are yellow and forked. Adults are an almost-uniform stone color with distinct, large scales, while juveniles may display a more vibrant color and pattern.
+<br><br>
+The muscles of the Komodo's jaws and throat allow it to swallow huge chunks of meat with astonishing rapidity. Several movable joints, such as the intramandibular hinge opens the lower jaw unusually wide. The stomach expands easily, enabling an adult to consume up to 80 percent of its own body weight in a single meal, which most likely explains some exaggerated claims for immense weights in captured individuals. When threatened, Komodos can throw up the contents of their stomachs to lessen their weight in order to flee.
+<br><br>
+Komodo dragons eat almost any kind of meat, scavenging for carcasses or stalking animals that range in size from small rodents to large water buffalo. Young feed primarily on small lizards and insects, as well as snakes and birds. If they live to be 5 years old, they move onto larger prey, such as rodents, monkeys, goats, wild boars and deer (the most popular meal). These reptiles are tertiary predators at the top of their food chain and are also cannibalistic.
+<br><br>
+While they have been hunted (legally and illegally), their population decline is due to their limited range. No Komodo dragons have been seen on the island of Padar since the 1970s, the result of widespread poaching of deer, the reptile's primary source of prey.
+
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/near threatened.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br>NEAR THREATENED  </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Varanus komodoensis </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br> 6,000 left in the wild  </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> Reach 10 feet (3 meters) long </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> weigh more than 300 pounds (140 kilograms)  </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="komodo habitat.html"> GRASSLANDS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/komodo map.jpg" width="800" height="500">
+<figcaption style="color: white; font-size: 35px;">POPULATION MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/komodo1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/komodo1.jpg"/>
+        <h1 align="center" style="color: orange;">IMPORTANCE OF KOMODO DRAGON</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Scientists say that's because the blood of Komodo dragons is filled with proteins called antimicrobial peptides, AMPs, an all-purpose infection defense produced by all living creatures, that one day may be used in drugs to protect humans.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/komodo2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/komodo2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+ Komodo dragons are limited to a few Indonesian islands of the Lesser Sunda group, including Rintja, Padar and Flores, and of course the island of Komodo, the largest at 22 miles (35 kilometers) long. They have not been seen on the island of Padar since the 1970s.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/komodo3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/komodo3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">They escape the heat of the day and seek refuge at night in burrows that are just barely large enough for them.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/komodo4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/komodo4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">The Smithsonian's National Zoo was the first zoo outside of Indonesia to successfully hatch Komodo dragons.   </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/komodo5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/komodo5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;"> Inside a Komodo dragon's mouth are about 60 short, sharp teeth that easily cut and tear flesh.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>

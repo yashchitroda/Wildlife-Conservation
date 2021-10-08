@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE ORANGUTAN</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(133,0,99);
+}
+
+.carousel {
+  background: rgb(133,0,99);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">ORANGUTAN</h1>
+<img src="../images/orangutan.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+  The name orangutan means "man of the forest" in the Malay language. In the lowland forests in which they reside, orangutans live solitary existences. They feast on wild fruits like lychees, mangosteens, and figs, and slurp water from holes in trees. They make nests in trees of vegetation to sleep at night and rest during the day. Adult male orangutans can weigh up to 200 pounds. Flanged males have prominent cheek pads called flanges and a throat sac used to make loud verbalizations called long calls. An unflanged male looks like an adult female. In a biological phenomenon unique among primates, an unflanged male can change to a flanged male for reasons that are not yet fully understood.
+  <br><br>
+
+Bornean and Sumatran orangutans differ a little in appearance and behavior. While both have shaggy reddish fur, Sumatran orangutans have longer facial hair. Sumatran orangutans are reported to have closer social bonds than their Bornean cousins. Bornean orangutans are more likely to descend from the trees to move around on the ground. Both species have experienced sharp population declines. A century ago there were probably more than 230,000 orangutans in total, but the Bornean orangutan is now estimated at about 104,700 based on updated geographic range (Endangered) and the Sumatran about 7,500 (Critically Endangered).
+<br><br>
+A third species of orangutan was announced in November, 2017. With no more than 800 individuals in existence, the Tapanuli orangutan is the most endangered of all great apes.
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/critically endangered.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Critically Endangered </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Pongo abelii, Pongo pygmaeus </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br> about 104,700 (Bornean), 13,846 (Sumatran), 800 (Tapanuli) </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 1.2-1.8 meters </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> up to 200 pounds </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="orangutan habitat.html"> RAINFORESTS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/orangutan map.jpg">
+<figcaption style="color: white; font-size: 35px;">POPULATION MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orangutan1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orangutan1.jpg"/>
+        <h1 align="center" style="color: magenta;">IMPORTANCE OF ORANGUTANS</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Orangutans are "gardeners" of the forest, playing a vital role in seed dispersal in their habitats. They live in tropical forests and prefer forest in river valleys and floodplains of their respective islands.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orangutan2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orangutan2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+ Orangutans' extremely low reproductive rate makes their populations highly vulnerable. Females give birth to one infant at a time about every 3-5 years, so these species can take a long time to recover from population declines.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orangutan3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orangutan3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">With human pressure only increasing, orangutans face an increasing risk of extinction.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orangutan4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orangutan4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Orangutans are an easy target for hunters because they're large and slow targets. They are killed for food or in retaliation when they move into agricultural areas and destroy crops. This usually occurs when orangutans can't find the food they need in the forest.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orangutan5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orangutan5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;">Females are hunted most often. When caught with offspring, the young are often kept as pets. The pet trade is a major problem. It is thought that for each orangutan reaching Taiwan, as many as 3-5 additional animals die in the process.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>

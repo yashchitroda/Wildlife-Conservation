@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE KOALA</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(65,120,57);
+}
+
+.carousel {
+  background: rgb(65,120,57);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">KOALA</h1>
+<img src="../images/koala.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+The koala is one of the world's most iconic animal species - right up there with the panda, tiger, elephant, dolphin, and polar bear. And they're found nowhere else in the world but Australia!
+<br><br>
+Our much loved koalas, with their stout, tailless body, large head with round, fluffy ears and large, spoon-shaped nose, are instantly recognisable as a symbol of Australia. Koalas are an integral part of the Australian bush - perched high up in the branches of gum trees sleeping for up to 20 hours a day
+ <br><br>
+A common mistake is calling them a 'koala bear,' they're marsupials not bears. 
+<br><br>
+Sadly, being iconic and symbolic is not enough to save the koala from the threat of extinction. In the 1920's, hundreds of thousands of koalas were shot for the fur trade and now koalas are contending with the consequences of ongoing excessive tree-clearing for agricultural and urban development in Queensland and New South Wales.
+<br><br>
+But there is much we can do to save the koala and the many other species that inhabit the Australian bush.
+The koala is the quintessential Australian animal, known globally and much loved. People come from all over the world to see koalas at wildlife parks and zoos. It is featured in advertisements, games, cartoons, and as soft toys.
+<br><br>
+In the wild, koalas serve as ambassadors for the many other species that also inhabit the Australian bush. Protecting bushland areas in an effort to save koala populations also protects the habitat of a wide range of animal and plant species such as possums, gliders, wombats, quolls, birds, and reptiles.
+<br><br>
+Koalas also have great cultural significance to Aboriginal Australians and feature in Dreamtime stories, songs, and rock art.
+ </p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/near threatened.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Near Threatened </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Phascolarctos cinereus </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br> 90000 in the wild </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 60-85 cm (24-33 in) </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 4-15 kg (9-33 lb) </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="koala habitat.html"> FORESTS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/koala map.jpg" width="800" height="450">
+<figcaption style="color: white; font-size: 35px;">POPULATION GRAPH</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/koala1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/koala1.jpg"/>
+        <h1 align="center" style="color: green;">IMPORTANCE OF KOALA</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Koalas are also an important part of the food chain are serve as prey for large carnivores in the ecosystem, During the rainy season, koala droppings act as nutrients for the regeneration of undergrowth and also serve as food for insects and small rodents.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/koala2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/koala2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+ Koalas inhabit eucalyptus woodlands since the leaves of the trees make up the largest part of their diet. Eucalyptus trees have limited calories and nutritional content, so the koalas sleep for up to 20 hours a day to conserve energy and fat.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/koala3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/koala3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">There is increasing evidence that climate change is leading to significant koala range contractions in western Queensland and New South Wales. This is due to reduced nutrient levels in Eucalyptus leaves, rendering them of lower quality. There is also strong evidence of the impact of droughts and extremely high temperatures on koalas and the likelihood that these events will not only increase in incidence but in severity as well.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/koala4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/koala4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">The destruction and fragmentation of habitat for agricultural and urban development means koalas must spend more time on the ground moving from tree to tree.  </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/koala5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/koala5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;">Trees play a crucial role in the water cycle; they suck up water from the underground and release it to the atmosphere, which then drops as rainfall. Deforestation and land clearing stop the formation of clouds resulting in diminished rainfall.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE HIPPOPOTAMUS</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(16,64,299);
+}
+
+.carousel {
+  background: rgb(16,64,299);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">HIPPOPOTAMUS</h1>
+<img src="../images/hippo.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+Hippopotamuses, the third largest terrestrial mammal, continue to decline due to widespread poaching for meat and ivory from the hippo's long ivory canine teeth. Meanwhile, human encroachment into hippo habitats have decimated their historic range, and the species have already gone regionally extinct in three African countries. Currently, hippos are confined mostly to protected areas, and over the past 10 years their populations have declined 7-20%. The two types of hippos, the common hippo and the pygmy hippo are listed as Vulnerable and Endangered, respectively.
+<br><br>
+The hippopotamus, also known as the "river horse," lives along the rivers and lakes throughout sub-Saharan Africa. Weighing up to 8,000 pounds, the hippo is the heaviest land animal after the elephant. Hippos seek refuge from the heat by living in water during the day, and at night they come ashore to feed on short, soft grasses and fallen fruit. The eyes and ears of a hippopotamus are on top of its head, so it can keep watch for enemies-mainly crocodiles-while lying low in the water. These giants are currently at risk from habitat loss.
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/save status.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Vulnerable </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Hippopotamus amphibius </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br> 115,000 to 130,000 </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 11-17 feet </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 2500-3000 pounds  </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="hippo habitat.html">Wetlands</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/hippo map.jpg">
+<figcaption style="color: white; font-size: 35px;">POPULATION MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/hippo1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/hippo1.jpg"/>
+        <h1 align="center" style="color: blue;">IMPORTANCE OF HIPPOPOTAMUS</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+The incredible hippo has been a part of the African ecosystem for millions of years, once ranging from the Nile river valley to the Cape</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/hippo2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/hippo2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+Very little is known about the shy pygmy hippo, and while common hippos are listed as vulnerable and pygmy hippos endangered, both of their conservation statuses are based on a 2004 estimate recommendation. Based on trends, it is likely their populations continue to decline.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/hippo3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/hippo3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Hippos face threats from human-wildlife conflict and habitat encroachment, with hundreds being shot each year to keep them out of crops and away from homes. They are often killed for their meat under the guise of protection, and both hippo fat and their ivory canine teeth are considered valuable. </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/hippo4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/hippo4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">The incredible hippo has been a part of the African ecosystem for millions of years, once ranging from the Nile river valley to the Cape. However, due to illegal and unregulated hunting, retaliatory killings and widespread habitat loss, the remaining 125,000-148,000 common hippos are now confined to protected areas.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/hippo5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/hippo5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;">Hippos have carveable canine teeth, and as a result, there has been an over 530% increase in hippo teeth export annually. Hippo populations have also been impacted in areas with ongoing civil unrest, and in places of relative stability, they find themselves entangled in snares.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
