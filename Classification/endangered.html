@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <title>ENDANGERED | Animals</title>
+    <style>
+      body{
+        background-color: rgb(148,31,28);
+        text-align: center;
+        text-transform: capitalize;
+        scroll-behavior: smooth;
+      }
+
+    #searchbar{
+     padding:15px;
+     border-radius: 10px;
+     border-style: solid;
+   }
+ 
+   input[type=text] {
+      width: 50%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+   input[type=text]:focus {
+     width: 98%;
+     font-size: 25px;
+     text-align: center;
+     background-color: black;
+     color: white;
+     
+   }
+
+.animals{
+   display: list-item;    
+}
+
+  a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+
+  .sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+  }
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*3 columns*/
+  .column1 {
+  float: left;
+  width: 45%;
+  padding: 5px;
+  height:100%; 
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+</head>
+  
+<body>
+      
+    <div class="sticky" style="">
+    <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search Endangered Animals.... " >
+        </div>
+      
+  
+   
+<div class="row1" style="">
+  <div class="column1" style="margin-left: 1%;">
+  <ol id='list' style="list-style: none;">
+           
+  <a href="../Animals/gharial.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/gharial.jpg" width="600" height="300">
+    <figcaption>gharial</figcaption></li></a><br>
+
+    <a href="../Animals/iguana.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/iguana.jpg" width="600" height="300">
+    <figcaption>iguana</figcaption></li></a><br>
+
+
+    <a href="../Animals/orangutan.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/orangutan.jpg" width="600" height="300">
+    <figcaption>orangutan</figcaption></li></a><br>
+
+    <a href="../Animals/owl.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/owl.jpg" width="600" height="300">
+    <figcaption>owl</figcaption></li></a><br>
+    
+     
+</ol>
+</div>
+
+
+
+<div class="column1" style=" margin-right: 1%;" >
+ <ol id='list' style="list-style: none;" >
+    
+   <a href="../Animals/pit viper.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/pit viper.jpg" width="600" height="300">
+    <figcaption>pit viper</figcaption></li></a><br>
+
+    <a href="../Animals/snowleo.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/snowleo.jpg" width="600" height="300">
+    <figcaption>snowleo</figcaption></li></a><br>
+
+    <a href="../Animals/tortoise.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/tortoise.jpg" width="600" height="300">
+    <figcaption>tortoise</figcaption></li></a><br>
+   
+
+    
+       
+    
+
+   
+</ol>
+</div>
+
+
+
+
+</div>
+<script>
+      function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+</script>
+</body>
+  
+</html>

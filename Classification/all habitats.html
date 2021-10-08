@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <title>All HABITATS</title>
+    <style>
+      body{
+        background-color: #eb7777;
+        text-align: center;
+        text-transform: capitalize;
+        scroll-behavior: smooth;
+      }
+
+    #searchbar{
+     padding:15px;
+     border-radius: 10px;
+     border-style: solid;
+   }
+ 
+   input[type=text] {
+      width: 50%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+   input[type=text]:focus {
+     width: 98%;
+     font-size: 25px;
+     text-align: center;
+     background-color: black;
+     color: white;
+     
+   }
+
+.animals{
+   display: list-item;    
+}
+
+  a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+
+  .sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+  }
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*3 columns*/
+  .column1 {
+  float: left;
+  width: 28%;
+  padding: 5px;
+  height:100%; 
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+</head>
+  
+<body>
+      
+    <div class="sticky" style="">
+    <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search Animals Habitat.... " >
+        </div>
+      
+  
+   
+<div class="row1" style="">
+  <div class="column1" style="">
+  <ol id='list' style="list-style: none;">
+    <a href="../Habitat/koala habitat.html"> <li class="animals"> <img class="hover-shadow cursor" src="../images/koala1.jpg" width="400" height="200">
+    <figcaption>koala</figcaption></li></a><br>
+       
+    <a href="../Habitat/hyena habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/hyena1.jpg" width="400" height="200">
+    <figcaption>Hyena</figcaption></li></a><br>
+
+    <a href="../Habitat/lion habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/lion1.jpg" width="400" height="200">
+    <figcaption>LION</figcaption></li></a><br>
+       
+    <a href="../Habitat/jaguar habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/jaguar1.jpg" width="400" height="200">
+    <figcaption>JAGUAR</figcaption></li></a><br>
+
+    <a href="../Habitat/emu habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/emu1.jpg" width="400" height="200">
+    <figcaption>emu</figcaption></li></a><br>
+       
+    <a href="../Habitat/pit viper habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/pit viper1.jpg" width="400" height="200">
+    <figcaption>pit viper</figcaption></li></a><br>
+
+    <a href="../Habitat/platypus habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/platypus1.jpg" width="400" height="200">
+    <figcaption>platypus</figcaption></li></a><br>
+       
+    <a href="../Habitat/sealion habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/sealion1.jpg" width="400" height="200">
+    <figcaption>sealion</figcaption></li></a><br>
+    
+    <a href="../Habitat/baboon habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/baboon1.jpg" width="400" height="200">
+    <figcaption>Baboon</figcaption></li></a><br>
+
+    <a href="../Habitat/porcupine habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/porcupine1.jpg" width="400" height="200">
+    <figcaption>porcupine</figcaption></li></a><br>
+
+    <a href="../Habitat/reindeer habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/reindeer1.jpg" width="400" height="200">
+    <figcaption>reindeer</figcaption></li></a><br>
+
+    <a href="../Habitat/meerkat habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/meerkat1.jpg" width="400" height="200">
+    <figcaption>meerkat</figcaption></li></a><br>
+
+    <a href="../Habitat/mountainlion habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/mountainlion1.jpg" width="400" height="200">
+    <figcaption>mountain lion</figcaption></li></a><br>
+
+    <a href="../Habitat/crab habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/crab1.jpg" width="400" height="200">
+    <figcaption>cocunut-crab</figcaption></li></a><br>
+
+    <a href="../Habitat/panda habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/panda1.jpg" width="400" height="200">
+    <figcaption>panda</figcaption></li></a><br>
+
+    <a href="../Habitat/gecko habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/gecko1.jpg" width="400" height="200">
+    <figcaption>gecko</figcaption></li></a><br>
+
+    <a href="../Habitat/babirusa habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/babirusa1.jpg" width="400" height="200">
+    <figcaption>babirusa</figcaption></li></a><br>
+     
+</ol>
+</div>
+
+
+
+<div class="column1" style="margin-left: 4%; margin-right: 4%;" >
+ <ol id='list' style="list-style: none;" >
+    <a href="../Habitat/gharial habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/gharial1.jpg" width="400" height="200">
+    <figcaption>gharial</figcaption></li></a><br>
+       
+    <a href="../Habitat/frog habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/frog1.jpg" width="400" height="200">
+    <figcaption>frog</figcaption></li></a><br>
+
+    <a href="../Habitat/toucan habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/toucan1.jpg" width="400" height="200">
+    <figcaption>toucan</figcaption></li></a><br>
+       
+    <a href="../Habitat/ant habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/ant1.jpg" width="400" height="200">
+    <figcaption>ANT</figcaption></li></a><br>
+
+    <a href="../Habitat/oryx habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/oryx1.jpg" width="400" height="200">
+    <figcaption>oryx</figcaption></li></a><br>
+       
+    <a href="../Habitat/cassowary habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/cassowary1.jpg" width="400" height="200">
+    <figcaption>cassowary</figcaption></li></a><br>
+
+    <a href="../Habitat/orangutan habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/orangutan1.jpg" width="400" height="200">
+    <figcaption>orangutan</figcaption></li></a><br>
+       
+    <a href="../Habitat/komodo habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/komodo1.jpg" width="400" height="200">
+    <figcaption>komodo</figcaption></li></a><br>
+
+    <a href="../Habitat/artic fox habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/artic fox1.jpg" width="400" height="200">
+    <figcaption>Artic-fox</figcaption></li></a><br>
+     
+    <a href="../Habitat/eagle habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/harpy eagle1.jpg" width="400" height="200">
+    <figcaption>HARPY EAGLE</figcaption></li></a><br>
+
+    <a href="../Habitat/armadillo habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/armadillo1.jpg" width="400" height="200">
+    <figcaption>armadillo</figcaption></li></a><br>
+
+    <a href="../Habitat/anaconda habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/anaconda1.jpg" width="400" height="200">
+    <figcaption>anaconda</figcaption></li></a><br>
+
+    <a href="../Habitat/flamingo habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/flamingo1.jpg" width="400" height="200">
+    <figcaption>flamingo</figcaption></li></a><br>
+
+    <a href="../Habitat/fossa habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/fossa1.jpg" width="400" height="200">
+    <figcaption>fossa</figcaption></li></a><br>
+
+    <a href="../Habitat/owl habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/owl1.jpg" width="400" height="200">
+    <figcaption>owl</figcaption></li></a><br>
+
+    <a href="../Habitat/leoshark habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/leoshark1.jpg" width="400" height="200">
+    <figcaption>leopard shark</figcaption></li></a><br>
+</ol>
+</div>
+
+
+
+<div class="column1" style="">
+  <ol id='list' style="list-style: none;">
+   <a href="../Habitat/hippo habitat.html"> <li class="animals"> <img class="hover-shadow cursor" src="../images/hippo1.jpg" width="400" height="200">
+    <figcaption>hippo</figcaption></li></a><br>
+       
+    <a href="../Habitat/alligator habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/alligator1.jpg" width="400" height="200">
+    <figcaption>alligator</figcaption></li></a><br>
+
+    <a href="../Habitat/crane habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/crane1.jpg" width="400" height="200">
+    <figcaption>crane</figcaption></li></a><br>
+       
+    <a href="../Habitat/cockatoo habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/cockatoo1.jpg" width="400" height="200">
+    <figcaption>cockatoo</figcaption></li></a><br>
+
+    <a href="../Habitat/racoon habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/racoon1.jpg" width="400" height="200">
+    <figcaption>racoon</figcaption></li></a><br>
+       
+    <a href="../Habitat/snowleo habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/snowleo1.jpg" width="400" height="200">
+    <figcaption>snowleo</figcaption></li></a><br>
+
+    <a href="../Habitat/chameleon habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/chameleon1.jpg" width="400" height="200">
+    <figcaption>chameleon</figcaption></li></a><br>
+       
+    <a href="../Habitat/spider habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/spider1.jpg" width="400" height="200">
+    <figcaption>spider</figcaption></li></a><br>
+
+    <a href="../Habitat/bear habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/bear1.jpg" width="400" height="200">
+    <figcaption>andean bear</figcaption></li></a><br>
+
+    <a href="../Habitat/polar bear habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/polar bear1.jpg" width="400" height="200">
+    <figcaption>polar bear</figcaption></li></a><br>
+
+    <a href="../Habitat/peacock habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/peacock1.jpg" width="400" height="200">
+    <figcaption>Peacock</figcaption></li></a><br>
+
+    <a href="../Habitat/giraffe habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/giraffe1.jpg" width="400" height="200">
+    <figcaption>giraffe</figcaption></li></a><br>
+
+    <a href="../Habitat/iguana habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/iguana1.jpg" width="400" height="200">
+    <figcaption>iguana</figcaption></li></a><br>
+
+    <a href="../Habitat/tapir habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/tapir1.jpg" width="400" height="200">
+    <figcaption>tapir</figcaption></li></a><br>
+
+    <a href="../Habitat/hummingbird habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/hummingbird1.jpg" width="400" height="200">
+    <figcaption>humming bird</figcaption></li></a><br>
+
+    <a href="../Habitat/tortoise habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/tortoise1.jpg" width="400" height="200">
+    <figcaption>tortoise</figcaption></li></a><br>
+
+    <a href="../Habitat/cock of rock habitat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/cock of rock1.jpg" width="400" height="200">
+    <figcaption>cock of the rock</figcaption></li></a><br>
+     
+  </ol>
+  </div>
+</div>
+<script>
+    	function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+</script>
+</body>
+  
+</html>

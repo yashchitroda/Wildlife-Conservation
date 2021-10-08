@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <title>All Mammals</title>
+    <style>
+      body{
+        background-color: #ffdab9;
+        text-align: center;
+        text-transform: capitalize;
+        scroll-behavior: smooth;
+      }
+
+    #searchbar{
+     padding:15px;
+     border-radius: 10px;
+     border-style: solid;
+   }
+ 
+   input[type=text] {
+      width: 50%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+   input[type=text]:focus {
+     width: 98%;
+     font-size: 25px;
+     text-align: center;
+     background-color: black;
+     color: white;
+     
+   }
+
+.animals{
+   display: list-item;    
+}
+
+  a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+
+  .sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+  }
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*3 columns*/
+  .column1 {
+  float: left;
+  width: 45%;
+  padding: 5px;
+  height:100%; 
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+</head>
+  
+<body>
+      
+    <div class="sticky" style="">
+    <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search Mammals.... " >
+        </div>
+      
+  
+   
+<div class="row1" style="">
+  <div class="column1" style="margin-left: 1%;">
+  <ol id='list' style="list-style: none;">
+    <a href="../Animals/koala.html"> <li class="animals"> <img class="hover-shadow cursor" src="../images/koala2.jpg" width="600" height="300">
+    <figcaption>koala</figcaption></li></a><br>
+       
+    <a href="../Animals/hyena.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/hyena2.jpg" width="600" height="300">
+    <figcaption>Hyena</figcaption></li></a><br>
+
+    <a href="../Animals/lion.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/lion2.jpg" width="600" height="300">
+    <figcaption>LION</figcaption></li></a><br>
+       
+    <a href="../Animals/jaguar.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/jaguar2.jpg" width="600" height="300">
+    <figcaption>JAGUAR</figcaption></li></a><br>
+
+    <a href="../Animals/platypus.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/platypus2.jpg" width="600" height="300">
+    <figcaption>platypus</figcaption></li></a><br>
+       
+    <a href="../Animals/sealion.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/sealion2.jpg" width="600" height="300">
+    <figcaption>sealion</figcaption></li></a><br>
+    
+    <a href="../Animals/baboon.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/baboon2.jpg" width="600" height="300">
+    <figcaption>Baboon</figcaption></li></a><br>
+
+    <a href="../Animals/porcupine.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/porcupine2.jpg" width="600" height="300">
+    <figcaption>porcupine</figcaption></li></a><br>
+
+    <a href="../Animals/reindeer.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/reindeer2.jpg" width="600" height="300">
+    <figcaption>reindeer</figcaption></li></a><br>
+
+    <a href="../Animals/meerkat.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/meerkat2.jpg" width="600" height="300">
+    <figcaption>meerkat</figcaption></li></a><br>
+
+    <a href="../Animals/mountainlion.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/mountainlion2.jpg" width="600" height="300">
+    <figcaption>mountain lion</figcaption></li></a><br>
+
+    <a href="../Animals/panda.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/panda2.jpg" width="600" height="300">
+    <figcaption>panda</figcaption></li></a><br>
+
+    <a href="../Animals/babirusa.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/babirusa2.jpg" width="600" height="300">
+    <figcaption>babirusa</figcaption></li></a><br>
+     
+</ol>
+</div>
+
+
+
+<div class="column1" style=" margin-right: 1%;" >
+ <ol id='list' style="list-style: none;" >
+    
+   
+    <a href="../Animals/oryx.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/oryx2.jpg" width="600" height="300">
+    <figcaption>oryx</figcaption></li></a><br>
+       
+    <a href="../Animals/orangutan.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/orangutan2.jpg" width="600" height="300">
+    <figcaption>orangutan</figcaption></li></a><br>
+
+    <a href="../Animals/artic fox.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/artic fox2.jpg" width="600" height="300">
+    <figcaption>Artic-fox</figcaption></li></a><br>
+   
+    <a href="../Animals/armadillo.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/armadillo2.jpg" width="600" height="300">
+    <figcaption>armadillo</figcaption></li></a><br>
+
+    <a href="../Animals/fossa.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/fossa2.jpg" width="600" height="300">
+    <figcaption>fossa</figcaption></li></a><br>
+
+    <a href="../Animals/hippo.html"> <li class="animals"> <img class="hover-shadow cursor" src="../images/hippo2.jpg" width="600" height="300">
+    <figcaption>hippo</figcaption></li></a><br>
+       
+    <a href="../Animals/racoon.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/racoon2.jpg" width="600" height="300">
+    <figcaption>racoon</figcaption></li></a><br>
+       
+    <a href="../Animals/snowleo.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/snowleo2.jpg" width="600" height="300">
+    <figcaption>snowleo</figcaption></li></a><br>
+
+    <a href="../Animals/bear.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/bear2.jpg" width="600" height="300">
+    <figcaption>andean bear</figcaption></li></a><br>
+
+    <a href="../Animals/polar bear.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/polar bear2.jpg" width="600" height="300">
+    <figcaption>polar bear</figcaption></li></a><br>
+
+    <a href="../Animals/giraffe.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/giraffe2.jpg" width="600" height="300">
+    <figcaption>giraffe</figcaption></li></a><br>
+
+    <a href="../Animals/tapir.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/tapir2.jpg" width="600" height="300">
+    <figcaption>tapir</figcaption></li></a><br>
+
+   
+</ol>
+</div>
+
+
+
+
+</div>
+<script>
+    	function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+</script>
+</body>
+  
+</html>

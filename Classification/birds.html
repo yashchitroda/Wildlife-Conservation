@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <title>All Birds</title>
+    <style>
+      body{
+        background-color: #dd7746;
+        text-align: center;
+        text-transform: capitalize;
+        scroll-behavior: smooth;
+      }
+
+    #searchbar{
+     padding:15px;
+     border-radius: 10px;
+     border-style: solid;
+   }
+ 
+   input[type=text] {
+      width: 50%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+   input[type=text]:focus {
+     width: 98%;
+     font-size: 25px;
+     text-align: center;
+     background-color: black;
+     color: white;
+    
+   }
+
+.animals{
+   display: list-item;    
+}
+
+  a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+
+  .sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+  }
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*3 columns*/
+  .column1 {
+  float: left;
+  width: 45%;
+  padding: 5px;
+  height:100%; 
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+</head>
+  
+<body>
+      
+    <div class="sticky" style="">
+    <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search Birds.... " >
+        </div>
+      
+  
+   
+<div class="row1" style="">
+  <div class="column1" style="margin-left: 1%;">
+  <ol id='list' style="list-style: none;">
+
+
+    <a href="../Animals/cassowary.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/cassowary2.jpg" width="600" height="300">
+    <figcaption>cassowary</figcaption></li></a><br>
+
+    <a href="../Animals/cock of rock.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/cock of rock2.jpg" width="600" height="300">
+    <figcaption>cock of the rock</figcaption></li></a><br>
+
+    <a href="../Animals/cockatoo.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/cockatoo2.jpg" width="600" height="300">
+    <figcaption>cockatoo</figcaption></li></a><br>
+
+    <a href="../Animals/crane.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/crane2.jpg" width="600" height="300">
+    <figcaption>crane</figcaption></li></a><br>
+
+    <a href="../Animals/emu.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/emu2.jpg" width="600" height="300">
+    <figcaption>emu</figcaption></li></a><br>
+
+    <a href="../Animals/flamingo.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/flamingo2.jpg" width="600" height="300">
+    <figcaption>flamingo</figcaption></li></a><br>  
+</ol>
+</div>
+
+
+<div class="column1" style=" margin-right: 1%;" >
+ <ol id='list' style="list-style: none;" >
+    
+   <a href="../Animals/harpy eagle.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/harpy eagle2.jpg" width="600" height="300">
+    <figcaption>HARPY EAGLE</figcaption></li></a><br>
+
+    <a href="../Animals/hummingbird.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/hummingbird2.jpg" width="600" height="300">
+    <figcaption>humming bird</figcaption></li></a><br>
+
+    <a href="../Animals/owl.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/owl2.jpg" width="600" height="300">
+    <figcaption>owl</figcaption></li></a><br>
+
+    <a href="../Animals/peacock.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/peacock2.jpg" width="600" height="300">
+    <figcaption>Peacock</figcaption></li></a><br>
+
+    <a href="../Animals/toucan.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/toucan2.jpg" width="600" height="300">
+    <figcaption>toucan</figcaption></li></a><br> 
+</ol>
+</div>
+</div>
+<script>
+    	function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+</script>
+</body>
+  
+</html>
