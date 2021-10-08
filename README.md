@@ -2,7 +2,7 @@
 # DEVELOPED BY YASH CHITRODA
 View Website:👇 
 <br>
-<a href="https://yashchitroda.github.io/Wildlife-Conservation/">yashchitroda.github.io/Wildlife-Conservation/</a>
+<a href="https://yashchitroda.github.io/Wildlife-Conservation/">https://yashchitroda.github.io/Wildlife-Conservation/</a>
 # PREVIEW.
 <img src="https://github.com/yashchitroda/Wildlife-Conservation/blob/main/images/Preview.jpg">
 <br><br>
