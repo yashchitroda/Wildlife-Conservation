@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <title>All Amphibians</title>
+    <style>
+      body{
+        background-color:#7499cc;
+        text-align: center;
+        text-transform: capitalize;
+        scroll-behavior: smooth;
+      }
+
+    #searchbar{
+     padding:15px;
+     border-radius: 10px;
+     border-style: solid;
+   }
+ 
+   input[type=text] {
+      width: 50%;
+      -webkit-transition: width 0.15s ease-in-out;
+      transition: width 0.15s ease-in-out;
+   }
+   input[type=text]:focus {
+     width: 98%;
+     font-size: 25px;
+     text-align: center;
+     background-color: black;
+     color: white;
+    
+   }
+
+.animals{
+   display: list-item;    
+}
+
+  a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+
+  .sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+  }
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+figcaption{
+  font-size: 30px;
+}
+/*3 columns*/
+   .column1 {
+  float: left;
+  width: 45%;
+  padding: 5px;
+  height:100%; 
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+</head>
+  
+<body>
+      
+    <div class="sticky" style="">
+    <input id="searchbar" onkeyup="search_animal()" type="text"
+        name="search" placeholder="Search Amphibians.... " >
+        </div>
+      
+  
+   
+<div class="row1" style="">
+  <div class="column1" style="margin-left: 1%;">
+  <ol id='list' style="list-style: none;">
+
+<a href="../Animals/frog.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/frog5.jpg" width="600" height="300">
+    <figcaption>poison dart frog</figcaption></li></a><br>
+
+
+<a href="../Animals/newt.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/newt3.jpg" width="600" height="300">
+    <figcaption>newt</figcaption></li></a><br>
+
+    
+
+    
+</ol>
+</div>
+<div class="column1" style=" margin-right: 1%;" >
+ <ol id='list' style="list-style: none;" >
+    
+   <a href="../Animals/salamander.html"><li class="animals"> <img class="hover-shadow cursor" src="../images/salamander2.jpg" width="600" height="300">
+    <figcaption>salamander</figcaption></li></a><br>
+
+
+</ol>
+</div>
+
+</div>
+<script>
+    	function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display="none";
+        }
+        else {
+            x[i].style.display="list-item";                 
+        }
+    }
+}
+</script>
+</body>
+  
+</html>
