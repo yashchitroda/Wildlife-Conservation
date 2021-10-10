@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE LIZARD</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(133,0,99);
+}
+
+.carousel {
+  background: rgb(133,0,99);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">LIZARD</h1>
+<img src="../images/lizard.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+Lizards are part of a group of animals known as reptiles. They are most closely related to snakes. In fact, some lizards, called sheltopusiks, look like snakes because they have no legs! Many lizards today resemble the ancient reptiles of the dinosaur era. Their ancestors appeared on Earth over 200 million years ago. 
+<br><br>
+In general, lizards have a small head, short neck, and long body and tail. Unlike snakes, most lizards have moveable eyelids. There are currently over 4,675 lizard species, including iguanas, chameleons, geckos, Gila monsters, monitors, and skinks.
+<br><br>
+Most lizards have eyelids, just like we do, that clean and protect their eyes when they blink. But some lizards, like geckos, can't blink! Instead, they have a clear membrane that shields their eyes from dirt or bright sun and use their tongue to clean their eyes. Many lizards, such as iguanas, can see in color. Their colorful body parts allow them to communicate with each other and help them tell which are male and which are female.
+<br><br>
+Just like snakes, a lizard sticks out its tongue to catch scent particles in the air and then pulls back its tongue and places those particles on the roof of its mouth, where there are special sensory cells. The lizard can use these scent “clues” to find food or a mate or to detect enemies.
+<br><br>
+Lizards can be found in every continent except Antarctica, and they live in all habitats except extremely cold areas and deep oceans. Most lizards live on the ground, but others can be found making their home in a tree, in a burrow, or in the water. Tree dwellers have special toes: long with sharp claws or short and wide. 
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/critically endangered.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Critically Endangered </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Lacertilia </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br> 4,675 species left </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 0.6 inch - 10 feet  </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 120 (milligrams) to 91 kg </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="lizard habitat.html"> FORESTS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/lizard map.jpg" width="800px">
+<figcaption style="color: white; font-size: 35px;">HABITAT MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/lizard1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/lizard1.jpg"/>
+        <h1 align="center" style="color: magenta;">IMPORTANCE OF lizard</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+ Lizards are important prey for many birds, snakes, and other animals, and they are important predators of insects. We could see other species collapse on the upper end of the food chain, and a release on insect populations. </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/lizard2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/lizard2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+Some species of lizards declining due to habitat destruction and increase in temperature.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/lizard3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/lizard3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Lizards love eating insects A lizards favourite food is insects. They love crickets, mealworms and flies! Plus lots more.A lizard can also be found eating plants and fruits too.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/lizard4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/lizard4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;"> Lizards are cold blooded. Lizards are cold-blooded.This means that they can't regulate their own temperature.Instead they need to sit in the sun to raise their temperature.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/lizard5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/lizard5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;"> The biggest lizard is the Komodo dragon Lizards come in all different sizes.The largest of them all is the Komodo dragon.They can grow up to 2.6 metres long!</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
