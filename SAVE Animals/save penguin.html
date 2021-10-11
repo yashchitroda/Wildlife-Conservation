@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE Penguin</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(16,64,299);
+}
+
+.carousel {
+  background-color: rgb(16,64,299);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">AFRICAN PENGUIN</h1>
+<img src="../images/penguin.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+  When you think of penguins, you may picture them surrounded by snow and ice. However, there is one species of penguins that is acclimated to warmer climates. African penguins live in colonies on the coast and islands of southern Africa.
+ <br><br>
+Also called jackass penguins, they make donkey-like braying sounds to communicate. They can dive under water for up to 2.5 minutes while trying to catch small fish such as anchovies and sardines. They may also eat squid and crustaceans.
+ <br><br>
+The African penguin averages about 60 cm (2 ft.) tall and weighs up to 3.6 kg (8 lb.). Their short tails and flipper-like wings that help them navigate in the water, while their webbed feet help propel them.
+ <br><br>
+To keep dry and insulated in cold water, African penguins are covered in dense, water-proof feathers. These feathers are white on the belly and black on the back, which aids in camouflage. Their white belly will blend with the light when predators look up at them from below, and their black backs meld with the darker seas when predators look down on them from above.
+ <br><br>
+African penguins breed within their colonies; they do not travel to give birth. The penguins nest in burrows they dig out of their own excrement, called guano, or in areas under boulders or bushes. Recent removal of the guano for fertilizer has forced the penguins to change their habits and nest primarily under bushes and boulders. Their nests protect eggs and chicks from the sun and from predators like cats and seagulls. Eggs are laid in pairs and both parents help incubate them. Both parents also feed the newly-born chicks. After 2-4 years, the chicks will mature and lay their own eggs.
+ <br><br>
+African penguins can live for an average of 10-15 years, however many do not reach their full life span, and populations have been steadily decreasing. The loss of nesting places due to guano removal has contributed to the population decline as well as a decrease of food due to overfishing and pollution.
+
+
+<br><br>
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/critically endangered.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Critically Endangered </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Spheniscus demersus </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br>less than 50,000 left </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 45 cm  </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 3.1 - 3.5 kg </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="penguin habitat.html">COASTAL PLAINS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/penguin map.jpg">
+<figcaption style="color: white; font-size: 35px;">HABITAT MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/penguin1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/penguin1.jpg"/>
+        <h1 align="center" style="color: magenta;">IMPORTANCE OF PENGUIN</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+The African penguin is the only species of penguin found in Africa. They play important roles in their ecosystem, both as a food source for sharks and seals and also act as predators to small fish such as anchovies and sardines.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/penguin2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/penguin2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+"Climate change, oil spills, overfishing and habitat destruction are among the many threats that the Endangered Species Act must begin to address." African penguin populations, which breed in Namibia and South Africa, have declined by 95 percent since preindustrial times.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/penguin3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/penguin3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">African penguins have a distinct, sharply pointed beak and black feet. The African penguin is one of the smallest penguin species. </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/penguin4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/penguin4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">African penguins face predation by gulls, feral cats and mongoose while nesting on land, sharks and fur seals prey on African penguins in the water.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/penguin5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/penguin5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;"> African penguins are also widely known as "jackass" penguins, for their donkey-like bray.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>

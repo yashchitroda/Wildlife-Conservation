@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE RHINO</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(214,123,42);
+}
+
+.carousel {
+  background: rgb(214,123,42);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">RHINO</h1>
+<img src="../images/rhino.jpg">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+Rhinoceroses are large, herbivorous mammals identified by their characteristic horned snouts. The word "rhinoceros" comes from the Greek "rhino" (nose) and "ceros" (horn). There are five species and 11 subspecies of rhino; some have two horns, while others have one.
+<br><br>
+Because the animals' horns are used in folk medicine for their supposed healing properties, rhinos have been hunted nearly to extinction. Their horns are sometimes sold as trophies or decorations, but more often they are ground up and used in traditional Chinese medicine.
+<br><br>
+estimates that there were 500,000 rhinos across Africa and Asia at the beginning of the 20th century. Today, the group says, there are 27,000 rhinos in the wild. Poaching and loss of habitat have put all rhino species in danger of extinction.
+<br><br>
+Rhino horns are made of keratin, which is also the key component of human hair and fingernails. But the horns are not just dense clumps of hair. CT scans have shown dense mineral deposits of calcium and melanin in the core of the horn. The calcium makes the horn stronger, and the melanin protects it from the sun's UV rays,
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/critically endangered.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br>Critically Endangered </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Rhinocerotidae </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br> 27,000 left </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 2.8M - 4M </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 2,000 - 2,300 kg </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="rhino habitat.html"> GRASSLANDS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/rhino map.jpg" width="700" height="600">
+<figcaption style="color: white; font-size: 35px;">POPULATION MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/rhino1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/rhino1.jpg"/>
+        <h1 align="center" style="color: orange;">IMPORTANCE OF RHINO</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Rhinos have been around for millions of years and play a crucial role in their ecosystem. They're important grazers, consuming large amounts of vegetation, which helps shape the African landscape. This benefits other animals and keeps a healthy balance within the ecosystem.</p>
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/rhino2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/rhino2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+These brilliant beasts are known for their awesome, giant horns that grow from their snouts.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/rhino3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/rhino3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Rhino poaching is being driven by the demand for rhino horn in Asian countries, particularly China and Viet Nam. Rhino horn is used in Traditional Chinese Medicine, but increasingly common is its use as a status symbol to display success and wealth.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/rhino4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/rhino4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">The protection of rhinos also helps protect the ecosystems on which they depend, as well as other species, including elephants, buffalo, large carnivores, and antelopes that share their habitat.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/rhino5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/rhino5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;">Rhinos are generally gentle and keep to themselves, but they are definitely not pacifists. If they are threatened, they'll move their bodies into an attack stance and often charge in an attempt to get rid of the perceived threat.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
