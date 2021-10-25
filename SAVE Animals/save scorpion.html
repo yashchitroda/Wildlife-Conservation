@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE scorpion</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(65,120,57);
+}
+
+.carousel {
+  background: rgb(65,120,57);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">scorpion</h1>
+<img src="../images/scorpion.jpg" width="100%">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+The largest species is the giant forest scorpion, which has the world record for size at nine inches long and a weight of two ounces. In general, the emperor scorpion is one of the largest species with an average length of nearly eight inches. The emperor scorpion also has the distinction of having the largest pincers, which are very similar to a lobster. Due to its large pincer size, the emperor scorpion has relatively weak venom. The smallest scorpion is a species found in Texas that measures only 23 millimeters. Most of these animals are around two inches in size.
+<br><br>
+Their coloring can vary based on where they live. They often blend into rocks, bark, and sand. Yellow and black are the most common colors of scorpions, but they can also be brown, red, or orange. Desert scorpions tend to be lighter colors while forest scorpions are typically black. When under ultraviolet light, all of them will appear blue or blue-green.
+<br><br>
+They are largely solitary compared to bug pests like ants or bees. They tend to stay in holes or burrows by themselves. If they are found in groups, it's likely due to recently born young scorpions.
+<br><br>
+These animals prey mainly on bugs such as grasshoppers, termites, beetles, and wasps. They may also eat other arachnids, including other scorpions. Large species sometimes prey on animals such as small reptiles and mammals. Different types hunt and kill prey in different ways. For example, species with large powerful pincers will use their pincers to crush prey. Scorpions with smaller pincers but stronger venom will sting their prey. Some of them chase or ambush prey while others wait in burrows.
+<br><br>
+These animals can survive a long time without food due to their slow metabolic rate, general inactivity and efficient biological method of food storage. Some of them can survive six months to a year without food.
+<br><br>
+Many animals actively prey on and eat them. Main predators include lizards, birds, snakes, frogs, rodents, and bats. Some mammals like meerkats and long-eared bats are immune to their venom. They also eat other scorpions, and large spiders will prey on smaller scorpions as well.
+
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/critically endangered.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Critically Endangered </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Scorpiones</p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br> only 2,000 species </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br>  2.5 to 8.3 inches </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 0.5 to 5 grams  </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="scorpion habitat.html">FORESTS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/scorpion map.jpg" width="800" height="450">
+<figcaption style="color: white; font-size: 35px;">POPULATION MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/scorpion1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/scorpion1.jpg"/>
+        <h1 align="center" style="color: green;">IMPORTANCE OF SCORPION</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Usually, scorpions find a meal at least every two to three weeks and play an important role in their ecosystem by keeping insect populations low. ... Some toxins are more useful on insects, some on crustaceans, and some on vertebrates. Scorpions use their venom to subdue their prey and for protection.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/scorpion2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/scorpion2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+A rule of thumb in judging a poisonous scorpion is the size of its tail and pincers. A scorpion with a thick tail and small pincers is likely to be a venomous species.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/scorpion3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/scorpion3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Scorpios are well-known for their ruthlessness. They are single-minded in their pursuit of their objectives, which they set high. Scorpios don't see or establish limitations in their life, and they won't let anybody tell them that they can't have what they desire. Scorpios aren't known for showing their decks.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/scorpion4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/scorpion4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Scorpion venom is used in moderation, it takes the scorpion a lot of energy to produce. It is used for subduing prey, in self defense and in some species mating. The venom is comprised of a groups of complex molecules called a neurotoxin, these contain proteins consisting of 60-70 crossed linked amino acids.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/scorpion5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/scorpion5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;">
+The deathstalker scorpion is the world's deadliest scorpion. It belongs to the family Buthidae and is also called the Palestine yellow scorpion among other names.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
