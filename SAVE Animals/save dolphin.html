@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE dolphin</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(16,64,299);
+}
+
+.carousel {
+  background-color: rgb(16,64,299);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">DOLPHIN</h1>
+<img src="../images/dolphin.jpg" width="100%">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+  Dolphins are highly intelligent marine mammals and are part of the family of toothed whales that includes orcas and pilot whales.
+ <br><br>
+They are found worldwide, mostly in shallow seas of the continental shelves, and are carnivores, mostly eating fish and squid. Dolphin coloration varies, but they are generally gray in color with darker backs than the rest of their bodies.
+ <br><br>
+As climate change causes the seas and oceans to warm, dolphins are being seen more frequently in colder waters outside their historic ranges. Due to rapidly rising ocean temperatures, dolphin's primary food sources are seeking deeper, cooler waters. Scientists are concerned that dolphins will have difficulty adapting as quickly as necessary to find new feeding grounds to sustain their populations. Some dolphins that live in areas where rivers and oceans meet, known as brackish waters, are also losing habitat as ocean levels rise due to global warming. 
+  <br><br>
+ Like every mammal, dolphins are warm blooded. Unlike fish, who breathe through gills, dolphins breathe air using lungs. Dolphins must make frequent trips to the surface of the water to catch a breath. The blowhole on top of a dolphin's head acts as a "nose," making it easy for the dolphin to surface for air.
+ <br><br>
+Other characteristics of dolphins that make them mammals rather than fish are that they give birth to live young rather than laying eggs and they feed their young with milk. Also, like all mammals, dolphins even have a tiny amount of hair, right around the blowhole, which is a little different than the scales of a fish.
+
+
+<br><br>
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/critically endangered.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Critically Endangered </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Delphinus delphis </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br>Only 44 species left </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 1.2 to 7 meters </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 4.5 to 180 kgs </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="dolphin habitat.html">OCEANS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/dolphin map.jpg" width="70%" >
+<figcaption style="color: white; font-size: 35px;">HABITAT MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/dolphin1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/dolphin1.jpg"/>
+        <h1 align="center" style="color: lightblue;">IMPORTANCE OF DOLPHIN</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+TDolphins play an important role in keeping their environment in balance. They eat other animals – mainly fish and squid – and are themselves a source of food for some sharks and other creatures. Without dolphins, the animals they prey on would increase in number, and their predators wouldn't have as much to eat.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/dolphin2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/dolphin2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+Dolphins are found in all the oceans of the world. Some live mainly along coastlines, but others live far out at sea.
+Dolphins work together to eat. They can herd schools of fish for group feeding. Some even use their clicking sounds for herding the fish. </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/dolphin3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/dolphin3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Dolphins live and play in schools of five to hundreds of animals. Some can swim and roll in formation, just like synchronized swimmers. Dolphins also work together to help when one animal is sick, hurt, or giving birth. </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/dolphin4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/dolphin4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">In 2000, many countries joined the International Dolphin Conservation Program, which is an international agreement to reduce the numbers of dolphins that are lost through tuna fishing. </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/dolphin5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/dolphin5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;"> Hunting, pollution, and human development  along coastlines and rivers have seriously impacted some dolphin populations. Dams, habitat loss, and fishing nets are also hurting dolphins. </p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
