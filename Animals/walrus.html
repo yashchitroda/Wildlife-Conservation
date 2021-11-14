@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WALRUS | Mammal</title>
+</head>
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<style>
+	body{
+		background-color: rgb(16,64,299);
+	}
+/*FLIP-CARD*/
+.flipper {
+  position: relative;
+}
+
+.flipper {
+  perspective: 600px;
+  -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+  
+  -webkit-transform-origin: 100% center;
+  -moz-transform-origin: 100% center;
+  -ms-transform-origin: 100% center;
+  transform-origin: 100% center;
+}
+
+.front-card, .back-card {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  
+    -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+  -o-transition: transform .6s ease-in-out;
+  -moz-transition: transform .6s ease-in-out;
+  -webkit-transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front-card {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.flipper.flip .front-card {
+  -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.back-card {
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+
+.flipper.flip .back-card {
+  -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+/Styling/
+.header-front {
+  background:rgb(5,102,246);
+}
+
+.header-back {
+  background:rgb(5,102,246) ;
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-clip: padding-box;
+ 
+}
+.card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image .header-front, .card .card-image .header-back {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+  width: 290px;
+  height: 400px;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+/*FLIP-CARD*/
+
+  .slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0 75px;
+  width: 100%;
+  height: 600px;
+}
+
+.imageSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+/* add 'visible' class via Javascript */
+.visible {
+  opacity: 1;
+}
+
+.slideshowArrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slideshowArrow:hover {
+  opacity: 0.75;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.slideshowCircles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out;
+}
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*animals details*/
+.column1 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 700px; 
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<div class="slideshowContainer">
+  
+<!-- Replace the image 'src' with the images in your project.
+Javascript is set up so that you can add as many images as you like, but make sure that you match the number of 'circle' span elements (below) to the number of images -->
+  <img class="imageSlides" src="../images/walrus.jpg">
+  <img class="imageSlides" style="height: 100%; width: 100%;"src="../images/walrus1.jpg">
+  <img class="imageSlides" style="height: 100%; width: 100%;" src="../images/walrus2.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;" src="../images/walrus3.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;" src="../images/walrus4.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;" src="../images/walrus5.jpg">
+  
+<!-- I would recommend to replace these 'span' elements with 'img' files
+for each the left and right arrow that fits your project, and size accordingly.
+I've shown 'span' elements because I didn't want to upload files. -->
+  <span style="color: black;" id ="leftArrow" class="slideshowArrow">&#8249;</span>
+  <span style="color: black;" id ="rightArrow" class="slideshowArrow">&#8250;</span>
+  
+  <div class="slideshowCircles">
+<!-- Filled 'dot' class is set to first image in slideshow, and then via Javascript the filled 'dot' class follows the current image.
+Make sure you match the number of these 'circle' span elements to the number of images in your slideshow. -->
+    <span class="circle dot"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+  </div>
+  
+</div>
+<!-- partial -->
+  <script>
+        // IMAGE SLIDES & CIRCLES ARRAYS, & COUNTER
+var imageSlides = document.getElementsByClassName('imageSlides');
+var circles = document.getElementsByClassName('circle');
+var leftArrow = document.getElementById('leftArrow');
+var rightArrow = document.getElementById('rightArrow');
+var counter = 0;
+
+// HIDE ALL IMAGES FUNCTION
+function hideImages() {
+  for (var i = 0; i < imageSlides.length; i++) {
+    imageSlides[i].classList.remove('visible');
+  }
+}
+
+// REMOVE ALL DOTS FUNCTION
+function removeDots() {
+  for (var i = 0; i < imageSlides.length; i++) {
+    circles[i].classList.remove('dot');
+  }
+}
+
+// SINGLE IMAGE LOOP/CIRCLES FUNCTION
+function imageLoop() {
+  var currentImage = imageSlides[counter];
+  var currentDot = circles[counter];
+  currentImage.classList.add('visible');
+  removeDots();
+  currentDot.classList.add('dot');
+  counter++;
+}
+
+// LEFT & RIGHT ARROW FUNCTION & CLICK EVENT LISTENERS
+function arrowClick(e) {
+  var target = e.target;
+  if (target == leftArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == 1) {
+      counter = (imageSlides.length - 1);
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    } else {
+      counter--;
+      counter--;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    }
+  } 
+  else if (target == rightArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == imageSlides.length) {
+      counter = 0;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    } else {
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    }
+  }
+}
+
+leftArrow.addEventListener('click', arrowClick);
+rightArrow.addEventListener('click', arrowClick);
+
+
+// IMAGE SLIDE FUNCTION
+function slideshow() {
+  if (counter < imageSlides.length) {
+    imageLoop();
+  } else {
+    counter = 0;
+    hideImages();
+    imageLoop();
+  }
+}
+
+// SHOW FIRST IMAGE, & THEN SET & CALL SLIDE INTERVAL
+setTimeout(slideshow, 500);
+var imageSlideshowInterval = setInterval(slideshow, 4000);
+  </script>
+
+<br>
+<img src="../images/status.jpg" style="width: 100%;">
+<br><br><br><br><br><br>
+<img style="margin-left: 13%;" src="../images/mammals.jpg">
+<img src="../images/stable.jpg" style="size: 100%;">
+<a href="../Habitat/walrus habitat.html"><img src="../images/arctic circle.jpg"></a>
+<p style="color: white; margin-left: 22%;">FISHES</p>
+<p style="color: white; margin-left: 45%; position: absolute; bottom: 1;">STABLE</p>
+<p style="color: white; margin-left: 73%; position: absolute; bottom:1;">ARTIC POLES</p>
+<br><br><br>
+
+
+<div class="container" style="margin-left: 10%; cursor: pointer" >
+    <div class="row" style="margin-top: 13px;">
+        <div class="flipper col-md-6 col-md-offset-3">
+            <div class="front-card card"  style="background-color: rgb(16,64,299); height: 185px;">
+                <div class="card-image">
+                    <div class="header-front"></div>
+                    <span class="card-title">
+                        <img src="../images/walrus habitat.jpg" style="width: 275px;">
+                    </span>
+                </div>
+              
+            </div>
+            <div class="back-card card"  style="background-color: rgb(5,102,246); height: 185px;">
+                <div class="card-image">
+                    <div class="header-back">
+                    <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; ">Walruses live in Arctic and sub-Arctic regions of the world near the North Pole. They can be found in the Pacific Ocean, Atlantic Ocean, and Arctic Ocean. </p>
+                </div>
+
+                </div>
+                <div class="card-content">
+                 <button style="padding: 2%; background-color: darkblue; color: white; border-radius: 30px; border-style: dashed; font-size: 20px; cursor: pointer;"  onclick="document.location='../Habitat/walrus habitat.html'">VIEW WALRUS'S HABITAT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container" style="margin-left: 15%; cursor: pointer;" >
+    <div class="row" style="margin-top: 13px; margin-left: 30%;">
+        <div class="flipper col-md-6 col-md-offset-3">
+            <div class="front-card card"  style="background-color: rgb(16,64,299); height: 185px;">
+                <div class="card-image">
+                    <div class="header-front"></div>
+                    <span class="card-title">
+                        <img src="../images/walrus diet.jpg" style="width: 275px;">
+                    </span>
+                </div>
+              
+            </div>
+            <div class="back-card card"  style="background-color: rgb(5,102,246); height: 185px;">
+                <div class="card-image">
+                    <div class="header-back">
+                    <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; ">Walruses prefer molluscs - mainly bivalves such as clams. They also eat many other kinds of benthic invertebrates including worms, gastropods, cephalopods, crustaceans, sea cucumbers, and other soft-bodied animals. </p>
+                </div>
+
+                </div>
+                <div class="card-content">
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<img src="../images/walrus size.jpg" style="height: 390px; width: 280px; margin-left: 70%;">
+
+<br><br><br><br><br><br><br><br>
+
+<div class="row1">
+  <div class="column1" style="background-color:rgb(5,102,246); margin-right: 1%;">
+    <h1 style="color: yellow; text-transform: capitalize;">Too big</h1>
+    <p style="color: white; font-size: 30px;">These blubbery marine mammals can really pack on the pounds! Adult male walrus can weigh upwards of 4,400 lbs. and measure over 11 ft. long. One exceptionally large specimen was 16 ft. long and approximately 5,000 lbs. or more! This species primary distinguishing characteristic, their long tusks, can measure over 3 ft. long. Nearby, sprouting from the lips, is a thick, bushy mass of whiskers. These whiskers, called vibrissae, help the them feel for prey in murky waters.</p>
+  </div>
+  <div class="column1" style="background-color:rgb(5,102,246);margin-right: 1%;">
+    <h1 style="color: yellow;text-transform: capitalize;"> Toothy Tusks</h1>
+    <p style="color: white; font-size: 30px;">Surprisingly, these tusks are no more than very long teeth! The canine teeth of a walrus grow much longer and larger than the vast majority of other animals, creating the tusks you see protruding from the mouth. Narwhal tusks are also extended The tusks of a walrus actually have a very important function. Everyone knows that it is extremely difficult to climb out of water onto ice, which is why thin ice is so dangerous if you fall in. 
+    </p>
+  </div>
+  <div class="column1" style="background-color:rgb(5,102,246);margin-right: 1%;">
+    <h1 style="color: yellow;text-transform: capitalize;">Home in ice</h1>
+    <p style="color: white; font-size: 30px;">Walruses live in a frigid and unforgiving Arctic wilderness. Their habitats must be shallow, as they feed along the sea floor and cannot dive to exceptional depths like some other pinnipeds.
+These marine mammals live in shallow seas and haul out on nearby ice floes to rest. Because they have limited habitats that they can occupy, they will often congregate in large numbers to take advantage of preferred areas.</p>
+  </div>
+</div>
+
+</body>
+<script>
+        $(document).ready(function(){
+  $('.flipper').click(function() {              
+    $(this).toggleClass('flip');
+  });
+});
+    </script>
+</html>
