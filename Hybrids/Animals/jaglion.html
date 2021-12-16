@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JAGLION | Hybrid Mammal</title>
+</head>
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<style>
+	body{
+		background-image: url('../../images/yellow bg.jpg');
+	}
+/*FLIP-CARD*/
+.flipper {
+  position: relative;
+}
+
+.flipper {
+  perspective: 600px;
+  -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+  
+  -webkit-transform-origin: 100% center;
+  -moz-transform-origin: 100% center;
+  -ms-transform-origin: 100% center;
+  transform-origin: 100% center;
+}
+
+.front-card, .back-card {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  
+    -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+  -o-transition: transform .6s ease-in-out;
+  -moz-transition: transform .6s ease-in-out;
+  -webkit-transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front-card {
+    z-index: 2;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.flipper.flip .front-card {
+  -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.back-card {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.flipper.flip .back-card {
+  -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+/Styling/
+.header-front {
+  background:rgb(5,102,246);
+}
+
+.header-back {
+  background-color:yellow ;
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-clip: padding-box;
+ 
+}
+.card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image .header-front, .card .card-image .header-back {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+  width: 290px;
+  height: 400px;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+/*FLIP-CARD*/
+
+  .slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0 75px;
+  width: 100%;
+  height: 600px;
+}
+
+.imageSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+/* add 'visible' class via Javascript */
+.visible {
+  opacity: 1;
+}
+
+.slideshowArrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slideshowArrow:hover {
+  opacity: 0.75;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.slideshowCircles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out;
+}
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*animals details*/
+.column1 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 700px; 
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*hover button*/
+.buttons {
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 20px 46px;
+  margin-bottom: 30px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #0505A9;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #0505A9;
+  border-radius: 30px;
+}
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s 0.2s;
+  border-radius: 30px;
+}
+.blob-btn:hover {
+  color: #FFFFFF;
+  border-radius: 30px;
+}
+.blob-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #ffffff;
+}
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url("#goo");
+}
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  background: #0505A9;
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+@supports (filter: url("#goo")) {
+  .blob-btn__blob {
+    transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+}
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+@supports (filter: url("#goo")) {
+  .blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.4);
+  }
+}
+
+
+/* Save animal UI */
+.carousel {
+  background-color: transparent;
+  margin-top: 1%;
+}
+
+.carousel-cell {
+  width: 50%;
+  height: 500px;
+  margin-right: 10px;
+  background: linear-gradient(lime,aquamarine);
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 650px;
+  height: 300px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+        padding: 20px;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+     
+</style>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+ <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+   <!--Save animal UI-->
+</head>
+<body>
+
+<div class="slideshowContainer">
+  
+<!-- Replace the image 'src' with the images in your project.
+Javascript is set up so that you can add as many images as you like, but make sure that you match the number of 'circle' span elements (below) to the number of images -->
+  <img class="imageSlides" style="height: 100%; width: 60%;"src="../../images/jaglion.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;"src="../../images/jaglion1.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;" src="../../images/jaglion2.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;" src="../../images/jaglion3.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;" src="../../images/jaglion4.jpg">
+
+  
+<!-- I would recommend to replace these 'span' elements with 'img' files
+for each the left and right arrow that fits your project, and size accordingly.
+I've shown 'span' elements because I didn't want to upload files. -->
+  <span style="color: black;" id ="leftArrow" class="slideshowArrow">&#8249;</span>
+  <span style="color: black;" id ="rightArrow" class="slideshowArrow">&#8250;</span>
+  
+  <div class="slideshowCircles">
+<!-- Filled 'dot' class is set to first image in slideshow, and then via Javascript the filled 'dot' class follows the current image.
+Make sure you match the number of these 'circle' span elements to the number of images in your slideshow. -->
+    <span class="circle dot"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    
+  </div>
+  
+</div>
+<!-- partial -->
+  <script>
+        // IMAGE SLIDES & CIRCLES ARRAYS, & COUNTER
+var imageSlides = document.getElementsByClassName('imageSlides');
+var circles = document.getElementsByClassName('circle');
+var leftArrow = document.getElementById('leftArrow');
+var rightArrow = document.getElementById('rightArrow');
+var counter = 0;
+
+// HIDE ALL IMAGES FUNCTION
+function hideImages() {
+  for (var i = 0; i < imageSlides.length; i++) {
+    imageSlides[i].classList.remove('visible');
+  }
+}
+
+// REMOVE ALL DOTS FUNCTION
+function removeDots() {
+  for (var i = 0; i < imageSlides.length; i++) {
+    circles[i].classList.remove('dot');
+  }
+}
+
+// SINGLE IMAGE LOOP/CIRCLES FUNCTION
+function imageLoop() {
+  var currentImage = imageSlides[counter];
+  var currentDot = circles[counter];
+  currentImage.classList.add('visible');
+  removeDots();
+  currentDot.classList.add('dot');
+  counter++;
+}
+
+// LEFT & RIGHT ARROW FUNCTION & CLICK EVENT LISTENERS
+function arrowClick(e) {
+  var target = e.target;
+  if (target == leftArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == 1) {
+      counter = (imageSlides.length - 1);
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    } else {
+      counter--;
+      counter--;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    }
+  } 
+  else if (target == rightArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == imageSlides.length) {
+      counter = 0;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    } else {
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    }
+  }
+}
+
+leftArrow.addEventListener('click', arrowClick);
+rightArrow.addEventListener('click', arrowClick);
+
+
+// IMAGE SLIDE FUNCTION
+function slideshow() {
+  if (counter < imageSlides.length) {
+    imageLoop();
+  } else {
+    counter = 0;
+    hideImages();
+    imageLoop();
+  }
+}
+
+// SHOW FIRST IMAGE, & THEN SET & CALL SLIDE INTERVAL
+setTimeout(slideshow, 500);
+var imageSlideshowInterval = setInterval(slideshow, 4000);
+  </script>
+
+<br>
+<h1 align="center" style="font-size:40px; color: green;">OVERVIEW</h1>
+<br><br>
+
+<table style="width:100%; text-align: left;">
+  
+  <tr>
+    <th>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../../images/hybrid.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p style="color: black"><b>STATUS</b> <br> Hybrid </p>
+      </div>
+    </div>
+  </th>
+    <th>
+       <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p style="color: black"><b>PARENTS</b> <br> &#9794;Jaguar &#10540; &#9792;Lion </p>
+      </div>
+    </div>
+  </th>
+   <th>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p style="color: black"><b>POPULATION</b> <br> Only 2 </p>
+      </div>
+    </div>
+  </th>
+  </tr>
+  <tr>
+   <th>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p style="color: black"><b>LENGTH</b> <br> 3.6 foot to 4 foot</p>
+      </div>
+    </div>
+  </th>
+    <th>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p style="color: black"><b>WEIGHT</b> <br> 86 to 140 kg  </p>
+      </div>
+    </div>
+  </th>
+   <th>
+     <!--
+     <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p style="color: black"><b>HABITAT</b> <br> <a style="color: black"; href="jaglion habitat.html">Wetlands</a></p>
+      </div>
+    </div> 
+  -->
+  <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../../images/lifespan.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p style="color: black"><b>LIFESPAN</b> <br>16-19 years</a></p>
+      </div>
+    </div> 
+  </th>
+  </tr>
+</table>
+
+    <br>
+
+
+      
+
+  
+<div class="container" style="margin-left: 10%; cursor: pointer" >
+    <div class="row" style="margin-top: 13px;">
+        <div class="flipper col-md-6 col-md-offset-3">
+            <div class="front-card card"  style="background-color: yellow; height: 185px;">
+                <div class="card-image">
+                    <div class="header-front"></div>
+                    <span class="card-title">
+                        <img src="../../images/jaglion habitat.jpg" style="width: 275px;">
+                    </span>
+                </div>
+              
+            </div>
+            <div class="back-card card"  style="background-color:yellow; height: 185px;">
+                <div class="card-image">
+                    <div class="header-back">
+                    <p align="center" style=" text-transform: capitalize; color: black; font-size: 28px;">Bear Creek Wildlife Sanctuary located in Ontario, Canada</p>
+                </div>
+
+                </div>
+                <div class="card-content">
+                 <button style="padding: 2%; background-color: orange; color: black; border-radius: 30px; border-style: dashed; font-size: 20px; cursor: pointer;"  onclick="document.location='../Habitat/jaglion habitat.html'">VIEW JAGLION'S HABITAT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container" style="margin-left: 15%; cursor: pointer;" >
+    <div class="row" style="margin-top: 13px; margin-left: 30%;">
+        <div class="flipper col-md-6 col-md-offset-3">
+            <div class="front-card card"  style="background-color: yellow; height: 185px;">
+                <div class="card-image">
+                    <div class="header-front"></div>
+                    <span class="card-title">
+                        <img src="../../images/jaglion diet.jpg" style="width: 275px;">
+                    </span>
+                </div>
+              
+            </div>
+            <div class="back-card card"  style="background-color: yellow; height: 185px;">
+                <div class="card-image">
+                    <div class="header-back">
+                    <p align="center" style=" text-transform: capitalize; color: black; font-size: 28px;">Jaglions will eat anything from lizards, mice, birds, turtles, hares, and wild hogs</p>
+                </div>
+
+                </div>
+                <div class="card-content">
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<img src="../../images/jaglion size.jpg" style="height: 390px; width: 280px; margin-left: 70%;">
+
+<br><br><br><br><br><br><br><br>
+
+<div align="center">
+<div class="buttons">
+  <button class="blob-btn" onclick="document.location='../Habitat/jaglion habitat.html'" >
+    VIEW JAGLION'S HABITAT
+    <span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span>
+  </button>
+  <br><br><br><br>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../../images/jaglion1.jpg"
+      data-flickity-lazyload-srcset="
+        ../../images/jaglion1.jpg"/>
+        <h1 align="center" style="color: blue;">MEET JAGLION</h1>
+        <p style="color:black; font-size: 25px; text-align: justify; margin-left: 20px; margin-right: 20px;">
+The mixture between a male Jaguar and an lioness. Jaglions are very rare</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../../images/jaglion2.jpg"
+      data-flickity-lazyload-srcset="
+        ../../images/jaglion2.jpg"/>
+                <p style="color:black; font-size: 25px; text-align: justify; margin-left: 20px; margin-right: 20px;">
+Jaglions cannot survive in the wild and only in captivity or reserve</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../../images/jaglion3.jpg"
+      data-flickity-lazyload-srcset="
+        ../../images/jaglion3.jpg"/>
+        <p style="color:black; font-size: 25px; text-align: justify; margin-left: 20px; margin-right: 20px;"> Jahzara (the black jaglion) coloration is due to a dominant black gene that was passed to her from her father (Diablo a Black Jaguar). The mutation is known as "melanistic" </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../../images/jaglion4.jpg"
+      data-flickity-lazyload-srcset="
+        ../../images/jaglion4.jpg"/>
+        <p style="color:black; font-size: 25px; text-align: justify; margin-left: 20px; margin-right: 20px;">Bear Creek Exotic Wildlife Sanctuary is home to the only (known) living Jaglions </p>
+
+
+  </div>
+  
+  
+</div>
+
+
+
+
+
+<br><br><br><br><br><br><br><br>
+
+<div class="row1">
+  <div class="column1" style="background: linear-gradient(to bottom, blue,brown); margin-right: 1%;">
+    <h1 style="color: yellow; text-transform: capitalize; text-align: left;">Meet Parents</h1>
+    <p style="color: white; font-size: 30px; text-align: left;">Offspring between a male jaguar and a female lion (lioness). 
+    <br><br>
+     On April 9, 2006, two Jaglions were born at Bear Creek Wildlife Sanctuary, Barrie (north of Toronto), Ontario, Canada. Jahzara (female) and Tsunami (male) were the result of an unintended mating between a black jaguar called Diablo and a lioness called Lola who had been hand-raised together and were inseparable. </p>
+  </div>
+  <div class="column1" style="background: linear-gradient(to bottom, blue,brown); margin-right: 1%;">
+    <h1 style="color: yellow;text-transform: capitalize; text-align: left;">Extreme Rare</h1>
+    <p style="color: white; font-size: 30px; text-align: left;">Tsunami and Jahzara might be the only jaglions in the world. 
+      <br><br>They are offsprings of Lola (Lion) and Diablo (Jaguar) and were permanently separated in 2012 
+      <br><br>These jaglions were born in Bear Creek Wildlife Sanctuary located in Ontario, Canada
+    </p>
+  </div>
+  <div class="column1" style=" background: linear-gradient(to bottom, blue,brown);margin-right: 1%;">
+    <h1 style="color: yellow;text-transform: capitalize; text-align: left;">Accidental Mating</h1>
+    <p style="color: white; font-size: 30px; text-align: left;">
+    The birth of jaglions at Bear Creek Wildlife Sanctuary was a surprise, because  Bear Creek Wildlife Sanctuary does not breed animals and does everything possible to ensure the animals do not reproduce on their own. </p>
+  </div>
+</div>
+
+</body>
+<script>
+        $(document).ready(function(){
+  $('.flipper').click(function() {              
+    $(this).toggleClass('flip');
+  });
+});
+    </script>
+</html>
