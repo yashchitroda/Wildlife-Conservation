@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE STARFISH</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(16,64,299);
+}
+
+.carousel {
+  background-color: rgb(16,64,299);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">STARFISH</h1>
+<img src="../images/starfish.jpg" width="100%">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+Starfish are echinoderms (spiny skinned sea urchins). They are also known as sea stars and are not really fish despite the name been given to them. Starfish cannot swim, and they do not use gills to breathe. For more information on these interesting sea urchins, see the fact sheet below or download the complete worksheet pack.
+<br><br>
+There are over 2,000 species of starfish. All echinoderms have five-point radial symmetry, which means that their body plan has five sections arranged around a central disk.
+Starfish are found in the deep blue sea of the ocean and shallow water as well. They are found in every ocean of the world. They are never found in fresh water.
+<br><br>
+Most starfish have a spiky shell which offers them protection. Depending on the species, a sea star's skin may feel leathery, or slightly prickly. This tough covering on their upper side is made up of plates of calcium carbonate with tiny spines on their surface.
+A sea star's spines are used for protection from predators, which include fish, sea otters and birds. Starfish come in a variety of colors and have many different types of patterns.
+While the five-armed varieties of sea star are the most well known, not all sea stars have 5 arms. Some have many more. Take the sun star for instance, which has up to 40 arms.
+<br><br>
+Starfish have hundreds of tiny projections known as tube feet on the underside of their body. The tube feet allow the starfish to move along the ocean bottom and open upon the scallops and clams they hunt for food.
+The starfish has two stomachs. The cardiac stomach eats the food outside the starfish's body. When the cardiac stomach comes back into the body, the food in it is transferred to the pyloric stomach. After the tube feet open the shell of its prey, the cardiac stomach is extended into the shell to pull the food inside. The tube feet play an important role in helping the starfish to procure its food. The tube feet are used to open up the oysters or clams. Then the stomach is extended into the shell to pull the food inside. They prey on bivalves like mussels and clams, as well as small fish, snails, and barnacles.
+
+<br><br>
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/near threatened.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Near Threatened </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Asteroidea </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br>Only 2000 species left </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 5 to 10 inches </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 0.2 to 3 kgs </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="starfish habitat.html">OCEANS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/starfish map.jpg" width="50%" >
+<figcaption style="color: white; font-size: 35px;">HABITAT MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/starfish1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/starfish1.jpg"/>
+        <h1 align="center" style="color: lightblue;">IMPORTANCE OF STARFISH</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Starfish are important members of the marine environment and are considered a keystone species. A keystone species preys on animals that have no other natural predators and if they are removed from the environment, their prey will increase in number and may drive out other species.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/starfish2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/starfish2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+When the starfish have been removed experimentally, the mussel populations have expanded rapidly and covered the rocky intertidal shores so exclusively that other species cannot establish themselves</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/starfish3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/starfish3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Regenerating their own arms is perhaps one of the most useful things a starfish can do. This attribute can be used in many different ways.  </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/starfish4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/starfish4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">With no brain or blood it seems crazy to think starfish can survive in the depth of the vast ocean. However, they find very clever and simple ways to get around it</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/starfish5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/starfish5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;"> Starfish are equipped with hundreds of tiny little feet at the end of each arm.To move, they fill these feet with seawater, causing the arm to move like a foot would. This mechanism allows the starfish to move - much quicker than you might expect. </p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
