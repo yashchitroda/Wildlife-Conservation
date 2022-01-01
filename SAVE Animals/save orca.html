@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<title>SAVE ORCA</title>
+
+<head>
+	<style>
+/* external css: flickity.css */
+
+* {
+ box-sizing: border-box;
+}
+
+body { 
+  font-family: sans-serif;
+  background-color: rgb(16,64,299);
+}
+
+.carousel {
+  background-color: rgb(16,64,299);
+  margin-top: 20%;
+}
+
+.carousel-cell {
+  width: 75%;
+  height: 600px;
+  margin-right: 10px;
+  background: #333;
+}
+
+.carousel-cell-image {
+  display: block;
+  width: 950px;
+  height: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+/* overview */
+.container {
+        display: flex;
+      }
+      
+      .image {
+        flex-basis: 12%;
+      }
+      .text {
+        font-size: 28px;
+        color: white;
+
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+</style>
+
+  <!--CSS... -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+</head>
+<body>
+  <!-- Javascript... -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<h1 align="center">ORCA</h1>
+<img src="../images/orca.jpg" width="100%">
+<h1 style="color: white;">SUMMARY</h1>
+<p style="font-size: 25px; background-color: white;">
+Orcas, or killer whales, are the largest of the dolphins and one of the world's most powerful predators. They're immediately recognizable by their distinctive black-and-white coloring. Smart and social, orcas make a wide variety of communicative sounds, and each pod has distinctive noises that its members will recognize even at a distance. They use echolocation to communicate and hunt, making sounds that travel underwater until they encounter objects, then bounce back, revealing their location, size, and shape.
+<br><br>
+Though they often frequent cold, coastal waters, orcas can be found from the polar regions to the Equator. They're at the top of the food chain and have very diverse diets, feasting on fish, penguins, and marine mammals such as seals, sea lions, and even whales, employing teeth that can be four inches long. They are known to grab seals right off the ice. They also eat fish, squid, and seabirds.
+<br><br>
+Orcas are highly intelligent, social mammals that have long been a part of marine park entertainment, performing shows for audiences. However, it's become increasingly clear that orcas do not thrive in captivity.
+<br><br>
+Orcas are protective of their young, and other adolescent females often assist the mother in caring for them. Mothers give birth every three to ten years, after a 17-month pregnancy. They give birth to one baby at a time, which may nurse for up to two years. In most cases, the bond between juvenile and mother will eventually weaken, and the young orca will go its own way, but in some pods, the juvenile may stay with the pod it was born into its entire life.
+
+<br><br>
+</p>
+<br><br><br><br>
+<h1>OVERVIEW</h1>
+<br><br>
+<div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/critically endangered.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>STATUS</b> <br> Critically Endangered </p>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>SCIENTIFIC NAME</b> <br> Orcinus orca </p>
+      </div>
+    </div>
+      <br>
+    <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>POPULATION</b> <br>Only 50,000 left </p>
+      </div>
+    </div>
+      <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>LENGTH</b> <br> 6 to 8 metres (20 to 26 ft) </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>WEIGHT</b> <br> 3 to 8 tons </p>
+      </div>
+    </div>
+    <br>
+      <div class="container">
+      <div class="image">
+        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+      </div>
+      <div class="text">
+        <p><b>HABITAT</b> <br> <a href="orca habitat.html">OCEANS</a></p>
+      </div>
+    </div>
+
+  
+
+
+<br><br><br><br>
+<div align="center">
+<img src="../images/orca map.jpg" width="50%" >
+<figcaption style="color: white; font-size: 35px;">HABITAT MAP</figcaption>
+</div>
+
+<div class="carousel"
+   data-flickity='{ "lazyLoad": true }'>
+
+
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orca1.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orca1.jpg"/>
+        <h1 align="center" style="color: lightblue;">IMPORTANCE OF ORCA</h1>
+        <p style="color:white; font-size: 25px; text-align: center;">
+Their bodies are enormous stores of carbon, and their presence in the ocean shapes the ecosystems around them. From the depths of the ocean, these creatures are also helping to determine the temperature of the planet</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orca2.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orca2.jpg"/>
+                <p style="color:white; font-size: 25px; text-align: center;">
+Without orcas the entire ecosystem would be thrown out of whack. While there are more seals, there is less fish because more seals to eat the fish,</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orca3.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orca3.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Orcas were given the name 'killer whale' by ancient sailor's observations of groups of orcas hunting and preying on larger whale species.   </p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orca4.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orca4.jpg"/>
+        <p style="color:white; font-size: 25px; text-align: center;">Orcas worldwide face a number of threats. They get caught in fishing nets and gear accidentally, face problems with toxic waste and pollution in the sea. Increase in boat traffic can result in collisions with orcas and an increase in underwater noise pollution.</p>
+
+
+  </div>
+  <div class="carousel-cell">
+    <img class="carousel-cell-image" alt="strawberries"
+      data-flickity-lazyload-src="../images/orca5.jpg"
+      data-flickity-lazyload-srcset="
+        ../images/orca5.jpg"/>
+       <p style="color:white; font-size: 25px; text-align: center;">After humans, orcas are the most widespread mammal in the animal kingdom. The species ranges from the Arctic to the Antarctic and can be found everywhere, from the freezing waters of the north and south to the warm waters along the equator, including the Hawaiian Islands, Galapagos Islands, and the Gulf of California.</p>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
