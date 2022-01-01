@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ELECTRIC EEL | Fish</title>
+</head>
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<style>
+	body{
+		background-color: rgb(16,64,299);
+	}
+/*FLIP-CARD*/
+.flipper {
+  position: relative;
+}
+
+.flipper {
+  perspective: 600px;
+  -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+  
+  -webkit-transform-origin: 100% center;
+  -moz-transform-origin: 100% center;
+  -ms-transform-origin: 100% center;
+  transform-origin: 100% center;
+}
+
+.front-card, .back-card {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  
+    -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+  -o-transition: transform .6s ease-in-out;
+  -moz-transition: transform .6s ease-in-out;
+  -webkit-transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front-card {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.flipper.flip .front-card {
+  -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.back-card {
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+
+.flipper.flip .back-card {
+  -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+/Styling/
+.header-front {
+  background:rgb(5,102,246);
+}
+
+.header-back {
+  background:rgb(5,102,246) ;
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-clip: padding-box;
+ 
+}
+.card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image .header-front, .card .card-image .header-back {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+  width: 290px;
+  height: 400px;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+/*FLIP-CARD*/
+
+  .slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0 75px;
+  width: 100%;
+  height: 600px;
+}
+
+.imageSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+/* add 'visible' class via Javascript */
+.visible {
+  opacity: 1;
+}
+
+.slideshowArrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slideshowArrow:hover {
+  opacity: 0.75;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.slideshowCircles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out;
+}
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*animals details*/
+.column1 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 700px; 
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="slideshowContainer">
+  
+<!-- Replace the image 'src' with the images in your project.
+Javascript is set up so that you can add as many images as you like, but make sure that you match the number of 'circle' span elements (below) to the number of images -->
+  <img class="imageSlides" src="../images/eel.jpg">
+  <img class="imageSlides" style="height: 100%; width: 100%;"src="../images/eel1.jpg">
+  <img class="imageSlides" style="height: 100%; width: 100%;" src="../images/eel2.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;" src="../images/eel3.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;" src="../images/eel4.jpg">
+  <img class="imageSlides" style="height: 100%; width: 60%;" src="../images/eel5.jpg">
+  
+<!-- I would recommend to replace these 'span' elements with 'img' files
+for each the left and right arrow that fits your project, and size accordingly.
+I've shown 'span' elements because I didn't want to upload files. -->
+  <span style="color: black;" id ="leftArrow" class="slideshowArrow">&#8249;</span>
+  <span style="color: black;" id ="rightArrow" class="slideshowArrow">&#8250;</span>
+  
+  <div class="slideshowCircles">
+<!-- Filled 'dot' class is set to first image in slideshow, and then via Javascript the filled 'dot' class follows the current image.
+Make sure you match the number of these 'circle' span elements to the number of images in your slideshow. -->
+    <span class="circle dot"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+  </div>
+  
+</div>
+<!-- partial -->
+  <script>
+        // IMAGE SLIDES & CIRCLES ARRAYS, & COUNTER
+var imageSlides = document.getElementsByClassName('imageSlides');
+var circles = document.getElementsByClassName('circle');
+var leftArrow = document.getElementById('leftArrow');
+var rightArrow = document.getElementById('rightArrow');
+var counter = 0;
+
+// HIDE ALL IMAGES FUNCTION
+function hideImages() {
+  for (var i = 0; i < imageSlides.length; i++) {
+    imageSlides[i].classList.remove('visible');
+  }
+}
+
+// REMOVE ALL DOTS FUNCTION
+function removeDots() {
+  for (var i = 0; i < imageSlides.length; i++) {
+    circles[i].classList.remove('dot');
+  }
+}
+
+// SINGLE IMAGE LOOP/CIRCLES FUNCTION
+function imageLoop() {
+  var currentImage = imageSlides[counter];
+  var currentDot = circles[counter];
+  currentImage.classList.add('visible');
+  removeDots();
+  currentDot.classList.add('dot');
+  counter++;
+}
+
+// LEFT & RIGHT ARROW FUNCTION & CLICK EVENT LISTENERS
+function arrowClick(e) {
+  var target = e.target;
+  if (target == leftArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == 1) {
+      counter = (imageSlides.length - 1);
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    } else {
+      counter--;
+      counter--;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    }
+  } 
+  else if (target == rightArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == imageSlides.length) {
+      counter = 0;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    } else {
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 3000);
+    }
+  }
+}
+
+leftArrow.addEventListener('click', arrowClick);
+rightArrow.addEventListener('click', arrowClick);
+
+
+// IMAGE SLIDE FUNCTION
+function slideshow() {
+  if (counter < imageSlides.length) {
+    imageLoop();
+  } else {
+    counter = 0;
+    hideImages();
+    imageLoop();
+  }
+}
+
+// SHOW FIRST IMAGE, & THEN SET & CALL SLIDE INTERVAL
+setTimeout(slideshow, 500);
+var imageSlideshowInterval = setInterval(slideshow, 4000);
+  </script>
+
+<br>
+<img src="../images/status.jpg" style="width: 100%;">
+<br><br><br><br><br><br>
+<img style="margin-left: 13%;" src="../images/fish.jpg">
+<img src="../images/stable.jpg" style="size: 100%;">
+<a href="../Habitat/eel habitat.html"><img src="../images/southamerica.jpg"></a>
+<p style="color: white; margin-left: 22%;">FISHES</p>
+<p style="color: white; margin-left: 45%; position: absolute; bottom: 1;">STABLE</p>
+<p style="color: white; margin-left: 73%; position: absolute; bottom:1;">SOUTH AMERICA</p>
+<br><br><br>
+
+
+<div class="container" style="margin-left: 10%; cursor: pointer" >
+    <div class="row" style="margin-top: 13px;">
+        <div class="flipper col-md-6 col-md-offset-3">
+            <div class="front-card card"  style="background-color: rgb(16,64,299); height: 185px;">
+                <div class="card-image">
+                    <div class="header-front"></div>
+                    <span class="card-title">
+                        <img src="../images/eel habitat.jpg" style="width: 275px;">
+                    </span>
+                </div>
+              
+            </div>
+            <div class="back-card card"  style="background-color: rgb(5,102,246); height: 185px;">
+                <div class="card-image">
+                    <div class="header-back">
+                    <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; "> found in South America, though they are primarily found in middle and lower Amazon and Orinoco river basins.</p>
+                </div>
+
+                </div>
+                <div class="card-content">
+                 <button style="padding: 2%; background-color: darkblue; color: white; border-radius: 30px; border-style: dashed; font-size: 20px; cursor: pointer;"  onclick="document.location='../Habitat/eel habitat.html'">VIEW ELECTRIC EEL'S HABITAT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container" style="margin-left: 15%; cursor: pointer;" >
+    <div class="row" style="margin-top: 13px; margin-left: 30%;">
+        <div class="flipper col-md-6 col-md-offset-3">
+            <div class="front-card card"  style="background-color: rgb(16,64,299); height: 185px;">
+                <div class="card-image">
+                    <div class="header-front"></div>
+                    <span class="card-title">
+                        <img src="../images/eel diet.jpg" style="width: 275px;">
+                    </span>
+                </div>
+              
+            </div>
+            <div class="back-card card"  style="background-color: rgb(5,102,246); height: 185px;">
+                <div class="card-image">
+                    <div class="header-back">
+                    <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 28px;">eats fish, crustaceans, insects and small vertebrates, such as amphibians, reptiles and mammals</p>
+                </div>
+
+                </div>
+                <div class="card-content">
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<img src="../images/eel size.jpg" style="height: 390px; width: 280px; margin-left: 70%;">
+
+<br><br><br><br><br><br><br><br>
+
+
+
+<div class="row1">
+  <div class="column1" style="background-color:rgb(5,102,246); margin-right: 1%;">
+    <h1 style="color: yellow; text-transform: capitalize;">Electric Discharge</h1>
+    <p style="color: white; font-size: 30px;">These famous freshwater predators get their name from the enormous electrical charge they can generate to stun prey and dissuade predators. Their bodies contain electric organs with about 6,000 specialized cells called electrocytes that store power like tiny batteries. When threatened or attacking prey, these cells will discharge simultaneously.
+    </p>
+  </div>
+  <div class="column1" style="background-color:rgb(5,102,246);margin-right: 1%;">
+    <h1 style="color: yellow;text-transform: capitalize;">nocturnal hunters</h1>
+    <p style="color: white; font-size: 30px;">
+      Electric eels are nocturnal, live in muddy, dark waters, and have poor eyesight. So instead of using eyes, electric eels emit a weak electric signal, which they use like radar to navigate, to find a mate, and to find prey. Once prey is found, electric eels will use a much stronger shock to stun prey, usually smaller fish.
+    </p>
+  </div>
+  <div class="column1" style="background-color:rgb(5,102,246);margin-right: 1%;">
+    <h1 style="color: yellow;text-transform: capitalize;">Caution</h1>
+    <p style="color: white; font-size: 30px;">The electric eel is able to produce electric shocks up to 600 volts and therefore is the most "electrical" fish in the world. This can be dangerous not only for its prey but also for human beings. Fortunately, the electric eel is not aggressive, and the electric shock hardly ever causes fatal accidents. </p>
+  </div>
+</div>
+
+</body>
+<script>
+        $(document).ready(function(){
+  $('.flipper').click(function() {              
+    $(this).toggleClass('flip');
+  });
+});
+    </script>
+</html>
