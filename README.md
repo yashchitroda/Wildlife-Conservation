@@ -3,7 +3,7 @@
 View Website:👇 
 <br>
 <a href="https://yashchitroda.github.io/Wildlife-Conservation/">https://yashchitroda.github.io/Wildlife-Conservation/</a>
-# PREVIEW.
+# PREVIEW
 <img src="https://github.com/yashchitroda/Wildlife-Conservation/blob/main/images/Preview.jpg">
 <br><br>
 <h1 align="center" id="animals" style="font-size: 40px; color:black;">ANIMALS</h1>
