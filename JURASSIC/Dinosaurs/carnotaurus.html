@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CARNOTAURUS | Theropod</title>
+</head>
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<style>
+	body{
+		background-color: darkred;
+	}
+/*FLIP-CARD*/
+.flipper {
+  position: relative;
+}
+
+.flipper {
+  perspective: 600px;
+  -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+  
+  -webkit-transform-origin: 100% center;
+  -moz-transform-origin: 100% center;
+  -ms-transform-origin: 100% center;
+  transform-origin: 100% center;
+}
+
+.front-card, .back-card {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  
+    -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+  -o-transition: transform .6s ease-in-out;
+  -moz-transition: transform .6s ease-in-out;
+  -webkit-transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front-card {
+    z-index: 2;
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+.flipper.flip .front-card {
+  -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.back-card {
+    -webkit-transform: rotateX(-180deg);
+    -moz-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+
+.flipper.flip .back-card {
+  -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+/Styling/
+.header-front {
+  background: red;
+}
+
+.header-back {
+  background:red;
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-clip: padding-box;
+ 
+}
+.card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image .header-front, .card .card-image .header-back {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+  width: 290px;
+  height: 400px;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+/*FLIP-CARD*/
+
+
+/*IMAGE BANNER*/
+  .slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0 75px;
+  width: 100%;
+  height: 600px;
+  border: dashed white 2px;
+}
+.visible {
+  opacity: 1;
+}
+/*IMAGE BANNER*/
+
+
+/*animals details*/
+.column1 {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: auto; 
+  min-height: 80%;
+}
+
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*animals details*/
+
+
+/*hover button*/
+.buttons {
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 20px 46px;
+  margin-bottom: 30px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #0505A9;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #0505A9;
+  border-radius: 30px;
+}
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s 0.2s;
+  border-radius: 30px;
+}
+.blob-btn:hover {
+  color: #FFFFFF;
+  border-radius: 30px;
+}
+.blob-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #ffffff;
+}
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url("#goo");
+}
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  background: #0505A9;
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+@supports (filter: url("#goo")) {
+  .blob-btn__blob {
+    transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+}
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+@supports (filter: url("#goo")) {
+  .blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.4);
+  }
+}
+
+/*ON HOVER TOOL-TIP*/
+tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  border-radius: 18px;
+  padding: 20px 20px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -4px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent red transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/*ON HOVER TOOL-TIP*/
+
+
+/*IMAGE ON HOVER TOOL-TIP*/
+div.click-to-top {
+display:inline-block;
+position:relative;
+max-width:260px;
+}
+
+div.click-to-top:hover{
+z-index:10;
+}
+
+div.click-to-top img{
+-webkit-transition: all 0.8s;
+moz-transition: all 0.8s;
+transition: all 0.8s;
+width:240px;
+}
+
+div.click-to-top img:hover{
+width:250px;
+z-index:10;
+}
+
+div.click-to-top span {
+  display: none;
+   position: absolute; 
+   background: #333;
+   color: #fff; 
+  }
+div.click-to-top:hover span {
+  display: block; 
+}
+/*IMAGE ON HOVER TOOL-TIP*/
+
+
+</style>
+</head>
+<body>
+
+<div class="slideshowContainer">
+  
+<!-- Replace the image 'src' with the images in your project.
+Javascript is set up so that you can add as many images as you like, but make sure that you match the number of 'circle' span elements (below) to the number of images -->
+  <img class="imageSlides" style="width:100%; height: 100%;"src="../images/Carnotaurus.jpg">
+
+  <span style="color: black;" id ="leftArrow" class="slideshowArrow"></span>
+  <span style="color: black;" id ="rightArrow" class="slideshowArrow"></span>
+  
+  <div class="slideshowCircles">
+<!-- Filled 'dot' class is set to first image in slideshow, and then via Javascript the filled 'dot' class follows the current image.
+Make sure you match the number of these 'circle' span elements to the number of images in your slideshow. -->
+    <span class="circle dot"></span>
+  </div>
+  
+</div>
+<!-- partial -->
+
+
+<br>
+
+<br><br><br><br><br><br>
+<!--
+<div align="center" class="tooltip">
+<img style="margin-left: -5%;" src="theropod.jpg" width="200px">
+<span class="tooltiptext">CARNIVOROUS BULL</span>
+<img style="margin-left: 10%;"src="timeline.jpg" width="200px">
+-->
+
+<div align="center">
+<div class="bottle-container">
+<div class="click-to-top"><img style="margin-left: -5%;" src="../images/theropod.jpg" width="200px"><span style="margin-left:20%;">LARGE THEROPOD</span></div>
+<div class="click-to-top"><img style="margin-left: 20%;"src="../images/timeline.jpg" width="200px"><span style="margin-left:45%;">LATE CRETACEOUS</span></div>
+</div>
+</div>
+
+<br><br><br><br><br><br>
+
+
+<div class="container" style="margin-left: 10%; cursor: pointer" >
+    <div class="row" style="margin-top: 13px;">
+        <div class="flipper col-md-6 col-md-offset-3">
+            <div class="front-card card"  style="background-color: darkred; height: 185px;">
+                <div class="card-image">
+                    <div class="header-front"></div>
+                    <span class="card-title">
+                        <img src="../images/carnotaurus size.jpg" style="width: 275px;">
+                    </span>
+                </div>
+              
+            </div>
+            <div class="back-card card"  style="background-color: red; height: 185px;">
+                <div class="card-image">
+                    <div class="header-back">
+                    <p align="center" style="font-size: 23px; color: white; margin-left:3%; margin-right:3%; line-height: 150%; ">Carnotaurus was a lightly built, bipedal predator, measuring 7.9 - 9.1M 
+                      <br>(26 to 30 ft) in length and weighing at least 1.35 metric tons</p>
+                </div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container" style="margin-left: 15%; cursor: pointer;" >
+    <div class="row" style="margin-top: 13px; margin-left: 30%;">
+        <div class="flipper col-md-6 col-md-offset-3">
+            <div class="front-card card"  style="background-color: darkred; height: 185px;">
+                <div class="card-image">
+                    <div class="header-front"></div>
+                    <span class="card-title">
+                         <img src="../images/carnivore diet.jpg" style="width: 275px;">
+                    </span>
+                </div>
+              
+            </div>
+            <div class="back-card card"  style="background-color: red; height: 185px;">
+                <div class="card-image">
+                    <div class="header-back">
+                    <p align="center" style="font-size: 23px; color: white; margin-left:3%; margin-right:3%; line-height: 150%; ">The Carnotaurus was a carnivore and ate meat. The Carnotaurus is one of the fastest large theropods to ever live on our planet.</p>
+                </div>
+
+                </div>
+                <div class="card-content">
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container" style="margin-left: 20%; cursor: pointer;" >
+    <div class="row" style="margin-top: 13px; margin-left: 60%; height: 185px;">
+        <div class="flipper col-md-6 col-md-offset-3">
+            <div class="front-card card"  style="background-color: darkred; height: 185px;">
+                <div class="card-image">
+                    <div class="header-front"></div>
+                    <span class="card-title">
+                         <img src="../images/carnotaurus mass.jpg" style="width: 275px;">
+                    </span>
+                </div>
+              
+            </div>
+            <div class="back-card card"  style="background-color: red; height: 185px;">
+                <div class="card-image">
+                    <div class="header-back">
+                    <p align="center" style="font-size: 23px; color: white; margin-left:3%; margin-right:3%; line-height: 150%; ">Carnotaurus measured up to 30 feet (9 meters) long, 10 feet (3 meters) tall, and weighed up to 4000 pounds (2 tons).</p>
+                </div>
+
+                </div>
+                <div class="card-content">
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<div align="center" style="margin-top:30%;">
+  <div class="tooltip">
+<div class="buttons">
+  <button class="blob-btn">
+    what's in name Carnotaurus ??
+     <span class="tooltiptext">CARNIVOROUS BULL</span>
+    <span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+
+    </span>
+  </button>
+  </div></div></div>
+  <br/><br/><br/><br/>
+
+
+
+ 
+
+
+
+<div class="row1" style="margin-top:10%;">
+  <div class="column1" style="background-color:red; margin-right: 1%;">
+    <h1 style="color: yellow; text-transform: capitalize;">It's "Kar-noh-TORE-us"</h1>
+    <p style="color: floralwhite; font-size: 30px;">
+<ul style="color: white; font-size: 30px;">
+    <li>Carnotaurus is one of the fastest large theropods to ever live on our planet. with estimated top running speed of 25 miles per hour. </li>
+    <br>
+    <li>They lived in the Late Cretaceous Period between 69 and 72 million years ago.</li>
+    <br>
+    <li>The teeth of a Carnotaurus are almost eight times smaller than teeth of a Tyrannosaurus Rex.</li>
+    <br>
+    <li>The Carnotaurus fossil was found in the Patagonia region in South America.</li>
+</ul>
+  </p>
+  </div>
+
+
+  <div class="column1" style="background-color:red; margin-right: 1%;">
+    <h1 style="color: yellow;text-transform: capitalize;">History</h1>
+    <p style="color: white; font-size: 30px;"> 
+ <ul style="color: white; font-size: 30px;">
+      <li>The Carnotaurus was discovered in 1984, by Jose Bonaparte, an Argentinian paleontologist. and got its scientific name Carnotaurus sastrei in 1985</li>
+      <br>
+      <li>The Carnotaurus is a member of the Abelisauridae family.</li>
+      <br>
+      <li>Paleontologists think the horns of the Carnotaurus might have been used to fight each other, either over a prey corpse, territory or during mating.</li>
+</ul>
+    </p>
+  </div>
+
+
+  <div class="column1" style="background-color:red ;margin-right: 1%;">
+    <h1 style="color: yellow;text-transform: capitalize;">Quick Facts</h1>
+    <p style="color: white; font-size: 30px;"> 
+    <ul style="color: white; font-size: 30px;">
+      <li><b style="color:yellowgreen;">Species Type:</b> Carnotaurus sastrei</li>
+      <br>
+      <li><b style="color:yellowgreen;">Type of Dinosaur:</b> Theropod</li>
+      <br>
+      <li><b style="color:yellowgreen;">Period:</b> Late Cretaceous</li>
+      <br>
+      <li><b style="color:yellowgreen;">Diet:</b> Meat (carnivorous)</li>
+      <br>
+      <li><b style="color:yellowgreen;">Life Span:</b> 20+ years (estimated)</li>
+      <br>
+      <li><b style="color:yellowgreen;">Length:</b>  Average 24 to 30 feet</li>
+      <br>
+      <li><b style="color:yellowgreen;">Weight:</b> At least 1.5 tons</li>
+      <br>
+    </ul>
+</p>
+  </div>
+</div>
+
+</body>
+<script>
+        $(document).ready(function(){
+  $('.flipper').click(function() {              
+    $(this).toggleClass('flip');
+  });
+});
+    </script>
+</html>
