@@ -7,54 +7,72 @@
 </head>
 <style>
   body {
-  margin: 0;
-  font-size: 18px;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-style: normal;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  letter-spacing: 0.05em;
-  background-image: url('../images/lightblue bg.jpg');
-  background-size: auto;
-  
+      margin: 0;
+      font-size: 18px;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      font-style: normal;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      letter-spacing: 0.05em;
+      background-image: url('../images/lightblue bg.jpg');
+      background-size: auto;
+    }
 
-}
+    * {
+      position: relative;
+      box-sizing: border-box;
+    }
 
-* {
-  position: relative;
-  box-sizing: border-box;
-}
+    .box {
+      width: 600px;
+      height: 500px;
+      color: white;
+      margin: 0 auto;
+    }
 
-.box {
-  width: 600px;
-  height: 500px;
-  color: white;
-  margin: 0 auto;
-  
-}
+    .box > div {
+      display: flex;
+      position: absolute;
+      top: 0;
+      width: 800px;
+      height: 500px;
+      background: linear-gradient(220deg);
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 16px;
+      transform-origin: top center;
+      will-change: transform;
+      overflow: hidden;
+    }
 
-.box > div {
-  display: flex;
-  position: absolute;
-  top: 0;
-  width: 800px;
-  height: 500px;
-  background: linear-gradient(220deg);
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 16px;
-  transform-origin: top center;
-  will-change: transform;
-  overflow: hidden;
-}
-img{
-  border-radius: 30px;
-}
+    img {
+      border-radius: 30px;
+      width: 99%; /* Make images fill their container */
+      height: 400px; /* Maintain aspect ratio */
+
+    }
+
+    /* Media queries for responsive design */
+    @media only screen and (max-width: 768px) {
+      .box {
+        width: 100%; /* Adjust the width as needed */
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .box {
+        width: 100%; /* Make boxes full-width */
+      }
+    }
+
+
+ 
 
 </style>
+
 <body>
 <script>
   document.body.innerHTML += `
@@ -69,7 +87,7 @@ for (let i = 0; i < 1; i += 1) {
     
       <div class="content">
         <div>
-          <a href="../Animals/koala.html"><img src="../images/koala.jpg" width="700px" height="400px"></a></a>
+          <a href="../Animals/koala.html"><img src="../images/koala.jpg" width="650px" height="400px"></a></a>
         </div>
         
 
@@ -82,7 +100,7 @@ for (let i = 0; i < 1; i += 1) {
     
       <div class="content">
         <div>
-          <a href="../Animals/sawfish.html"><img src="../images/sawfish.jpg" width="700px" height="400px"></a></a>
+          <a href="../Animals/sawfish.html"><img src="../images/sawfish.jpg" width="650px" height="400px"></a></a>
         </div>
         
 
@@ -93,7 +111,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-          <a href="../Animals/toucan.html"><img src="../images/toucan.jpg" width="700px" height="400px"></a>
+          <a href="../Animals/toucan.html"><img src="../images/toucan.jpg" width="650px" height="400px"></a>
         </div>
   `;
 }
@@ -102,7 +120,7 @@ for (let i = 0; i < 1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-          <a href="../Animals/artic fox.html"><img src="../images/artic fox.jpg" width="700px" height="400px"></a>
+          <a href="../Animals/artic fox.html"><img src="../images/artic fox.jpg" width="650px" height="400px"></a>
         </div>
   `;
 }
@@ -111,7 +129,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-          <a href="../Animals/millipede.html"><img src="../images/millipede.jpg" width="700px" height="400px"></a>
+          <a href="../Animals/millipede.html"><img src="../images/millipede.jpg" width="650px" height="400px"></a>
         </div>    
   `;
 }
@@ -120,7 +138,7 @@ for (let i = 0; i < 1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/starfish.html"> <img src="../images/starfish.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/starfish.html"> <img src="../images/starfish.jpg" width="650px" height="400px"></a>
         </div>
   `;
 }
@@ -129,7 +147,7 @@ for (let i = 0; i < 1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/meerkat.html"> <img src="../images/meerkat.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/meerkat.html"> <img src="../images/meerkat.jpg" width="650px" height="400px"></a>
         </div>
   `;
 }
@@ -139,7 +157,7 @@ for (let i = 0; i < 1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/seahorse.html"> <img src="../images/seahorse.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/seahorse.html"> <img src="../images/seahorse.jpg" width="650px" height="400px"></a>
         </div>
   `;
 }
@@ -148,7 +166,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-          <a href="../Animals/mountainlion.html"><img src="../images/mountainlion.jpg" width="700px" height="400px"></a>
+          <a href="../Animals/mountainlion.html"><img src="../images/mountainlion.jpg" width="650px" height="400px"></a>
         </div>
   `;
 }
@@ -157,7 +175,7 @@ for (let i = 0; i < 1; i += 1) {
     <div class="box"><div>  
       <div class="content">
         <div>
-         <a href="../Animals/tapir.html"> <img src="../images/tapir.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/tapir.html"> <img src="../images/tapir.jpg" width="650px" height="400px"></a>
         </div>
   `;
 }
@@ -166,7 +184,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/hammerhead.html"> <img src="../images/hammerhead.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/hammerhead.html"> <img src="../images/hammerhead.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -175,7 +193,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/newt.html"> <img src="../images/newt.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/newt.html"> <img src="../images/newt.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -184,7 +202,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/puffin.html"> <img src="../images/puffin.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/puffin.html"> <img src="../images/puffin.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -193,7 +211,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/snowleo.html"> <img src="../images/snowleo.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/snowleo.html"> <img src="../images/snowleo.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -202,7 +220,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/horseshoe.html"> <img src="../images/horseshoe.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/horseshoe.html"> <img src="../images/horseshoe.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -211,7 +229,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/harpy eagle.html"> <img src="../images/harpy eagle.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/harpy eagle.html"> <img src="../images/harpy eagle.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -220,7 +238,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/platypus.html"> <img src="../images/platypus.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/platypus.html"> <img src="../images/platypus.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -229,7 +247,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-        <a href="../Animals/honey pot.html">  <img src="../images/honey pot.jpg" width="700px" height="400px"></a>
+        <a href="../Animals/honey pot.html">  <img src="../images/honey pot.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -238,7 +256,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-        <a href="../Animals/fossa.html">  <img src="../images/fossa.jpg" width="700px" height="400px"></a>
+        <a href="../Animals/fossa.html">  <img src="../images/fossa.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -247,7 +265,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/sloth.html"> <img src="../images/sloth.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/sloth.html"> <img src="../images/sloth.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -256,7 +274,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-        <a href="../Animals/walrus.html">  <img src="../images/walrus.jpg" width="700px" height="400px"></a>
+        <a href="../Animals/walrus.html">  <img src="../images/walrus.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -265,7 +283,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-        <a href="../Animals/gila.html">  <img src="../images/gila.jpg" width="700px" height="400px"></a>
+        <a href="../Animals/gila.html">  <img src="../images/gila.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -274,7 +292,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/archer.html"> <img src="../images/archer.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/archer.html"> <img src="../images/archer.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -283,7 +301,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-        <a href="../Animals/mole.html">  <img src="../images/mole.jpg" width="700px" height="400px"></a>
+        <a href="../Animals/mole.html">  <img src="../images/mole.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -292,7 +310,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/orangutan.html"> <img src="../images/orangutan.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/orangutan.html"> <img src="../images/orangutan.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -301,7 +319,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/salamander.html"> <img src="../images/salamander.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/salamander.html"> <img src="../images/salamander.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -310,7 +328,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/crab.html"> <img src="../images/crab.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/crab.html"> <img src="../images/crab.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -319,7 +337,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/komodo.html"> <img src="../images/komodo.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/komodo.html"> <img src="../images/komodo.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -328,7 +346,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/beluga.html"> <img src="../images/beluga.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/beluga.html"> <img src="../images/beluga.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -337,7 +355,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/cassowary.html"> <img src="../images/cassowary.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/cassowary.html"> <img src="../images/cassowary.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -346,7 +364,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/pangolin.html"> <img src="../images/pangolin.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/pangolin.html"> <img src="../images/pangolin.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -355,7 +373,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/frog.html"> <img src="../images/frog.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/frog.html"> <img src="../images/frog.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -364,7 +382,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/manta.html"> <img src="../images/manta.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/manta.html"> <img src="../images/manta.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -373,7 +391,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/cockatoo.html"> <img src="../images/cockatoo.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/cockatoo.html"> <img src="../images/cockatoo.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -382,7 +400,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-          <a href="../Animals/reindeer.html"><img src="../images/reindeer.jpg" width="700px" height="400px"></a>
+          <a href="../Animals/reindeer.html"><img src="../images/reindeer.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -391,7 +409,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/macaw.html"> <img src="../images/macaw.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/macaw.html"> <img src="../images/macaw.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -400,7 +418,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/orca.html"> <img src="../images/orca.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/orca.html"> <img src="../images/orca.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -409,7 +427,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/shrew.html"> <img src="../images/shrew.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/shrew.html"> <img src="../images/shrew.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -418,7 +436,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/angler.html"> <img src="../images/angler.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/angler.html"> <img src="../images/angler.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -427,7 +445,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-          <a href="../Animals/bison.html"><img src="../images/bison.jpg" width="700px" height="400px"></a>
+          <a href="../Animals/bison.html"><img src="../images/bison.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -436,7 +454,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/vanquita.html"> <img src="../images/vanquita.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/vanquita.html"> <img src="../images/vanquita.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -445,7 +463,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/whitetiger.html"> <img src="../images/whitetiger.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/whitetiger.html"> <img src="../images/whitetiger.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -454,7 +472,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/harpseal.html"> <img src="../images/harpseal.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/harpseal.html"> <img src="../images/harpseal.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -463,7 +481,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/bushviper.html"> <img src="../images/bushviper.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/bushviper.html"> <img src="../images/bushviper.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -472,7 +490,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/eel.html"> <img src="../images/eel.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/eel.html"> <img src="../images/eel.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -481,7 +499,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/stag.html"> <img src="../images/stag.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/stag.html"> <img src="../images/stag.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -490,7 +508,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/cuttle.html"> <img src="../images/cuttle.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/cuttle.html"> <img src="../images/cuttle.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -499,7 +517,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/wolverine.html"> <img src="../images/wolverine.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/wolverine.html"> <img src="../images/wolverine.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
@@ -508,7 +526,7 @@ for (let i = 0; i <1; i += 1) {
     <div class="box"><div>
       <div class="content">
         <div>
-         <a href="../Animals/shrimp.html"> <img src="../images/shrimp.jpg" width="700px" height="400px"></a>
+         <a href="../Animals/shrimp.html"> <img src="../images/shrimp.jpg" width="650px" height="400px"></a>
         </div>  
   `;
 }
