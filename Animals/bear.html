@@ -5,225 +5,207 @@
 </head>
  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
 <style>
+  /* Global Styles */
   body{
     background-color: rgb(65,120,57);
+    height: auto;
   }
-/*FLIP-CARD*/
-.flipper {
-  position: relative;
-}
+ /* FLIP-CARD Styles */
+        .flipper {
+            position: relative;
+            perspective: 600px;
+            -webkit-perspective: 600px;
+            -moz-perspective: 600px;
+            -webkit-transform-origin: 100% center;
+            -moz-transform-origin: 100% center;
+            -ms-transform-origin: 100% center;
+            transform-origin: 100% center;
+        }
 
-.flipper {
-  perspective: 600px;
-  -webkit-perspective: 600px;
-    -moz-perspective: 600px;
-  
-  -webkit-transform-origin: 100% center;
-  -moz-transform-origin: 100% center;
-  -ms-transform-origin: 100% center;
-  transform-origin: 100% center;
-}
+        .front-card,
+        .back-card {
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
 
-.front-card, .back-card {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  
-    -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
 
-  -o-transition: transform .6s ease-in-out;
-  -moz-transition: transform .6s ease-in-out;
-  -webkit-transition: transform .6s ease-in-out;
-  transition: transform .6s ease-in-out;
-  
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+            -o-transition: transform .6s ease-in-out;
+            -moz-transition: transform .6s ease-in-out;
+            -webkit-transition: transform .6s ease-in-out;
+            transition: transform .6s ease-in-out;
 
-.front-card {
-    z-index: 2;
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-}
-.flipper.flip .front-card {
-  -webkit-transform: rotateX(180deg);
-    -moz-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-}
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
 
-.back-card {
-    -webkit-transform: rotateX(-180deg);
-    -moz-transform: rotateX(-180deg);
-    transform: rotateX(-180deg);
-}
+        .front-card {
+            z-index: 2;
+            -webkit-transform: rotateX(0deg);
+            -moz-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+        }
 
-.flipper.flip .back-card {
-  -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-}
+        .flipper.flip .front-card {
+            -webkit-transform: rotateX(180deg);
+            -moz-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+        }
 
-/Styling/
-.header-front {
-  background:rgb(91,147,65);
-}
+        .back-card {
+            -webkit-transform: rotateX(-180deg);
+            -moz-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+        }
 
-.header-back {
-  background:rgb(91,147,65) ;
-}
+        .flipper.flip .back-card {
+            -webkit-transform: rotateX(0deg);
+            -moz-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+        }
 
-.card {
-  margin-top: 10px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  background-clip: padding-box;
- 
-}
-.card span.card-title {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 300;
-    text-transform: uppercase;
-}
+        /* Styling for Header and Cards */
+        .header-front,
+        .header-back {
+            background-color: rgb(91,147,65);
+        }
 
-.card .card-image {
-  position: relative;
-  overflow: hidden;
-}
-.card .card-image .header-front, .card .card-image .header-back {
-  border-radius: 2px 2px 0 0;
-  background-clip: padding-box;
-  position: relative;
-  z-index: -1;
-  width: 290px;
-  height: 400px;
-}
-.card .card-image span.card-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 16px;
-}
-.card .card-content {
-  padding: 16px;
-  border-radius: 0 0 2px 2px;
-  background-clip: padding-box;
-  box-sizing: border-box;
-}
-.card .card-content p {
-  margin: 0;
-  color: inherit;
-}
-.card .card-content span.card-title {
-  line-height: 48px;
-}
-/*FLIP-CARD*/
+        .card {
+            margin-top: 10px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            background-clip: padding-box;
+        }
 
-  .slideshowContainer {
-  position: relative;
-  overflow: hidden;
-  margin: 50px 0 75px;
-  width: 100%;
-  height: 600px;
-}
+        .card span.card-title {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 300;
+            text-transform: uppercase;
+            width: 275px
+        }
 
-.imageSlides {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  z-index: -1;
-}
+        .card .card-image {
+            position: relative;
+            overflow: hidden;
+        }
 
-/* add 'visible' class via Javascript */
-.visible {
-  opacity: 1;
-}
+        .card .card-image .header-front,
+        .card .card-image .header-back {
+            border-radius: 2px 2px 0 0;
+            background-clip: padding-box;
+            position: relative;
+            z-index: -1;
+            width: 290px;
+            height: 400px;
+        }
 
-.slideshowArrow {
-  font-size: 7em;
-  color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
-}
+        .card .card-image span.card-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 16px;
+            width: 275px
+        }
 
-.slideshowArrow:hover {
-  opacity: 0.75;
-}
+        .card .card-content {
+            padding: 16px;
+            border-radius: 0 0 2px 2px;
+            background-clip: padding-box;
+            box-sizing: border-box;
+        }
 
-#leftArrow {
-  position: absolute;
-  left: 4%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+        .card .card-content p {
+            margin: 0;
+            color: inherit;
+        }
 
-#rightArrow {
-  position: absolute;
-  right: 4%;
-  top: 50%;
-  transform: translate(50%, -50%);
-}
+        
 
-.slideshowCircles {
-  position: absolute;
-  bottom: 2%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+        /* Slideshow Styles */
+        .slideshowContainer {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 600px;
+        }
 
-.circle {
-  display: inline-block;
-  margin-left: 3px;
-  margin-right: 3px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: solid 2px rgba(255, 255, 255, 0.5);
-  transition: 1s ease-in-out;
-}
+        .imageSlides {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: -1;
+        }
 
-.dot {
-  background-color: rgba(255, 255, 255, 0.7);
-  border: solid 2px rgba(255, 255, 255, 0.5);
-}
+        .visible {
+            opacity: 1;
+        }
 
-.button {
-  background-color: white;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+        .slideshowArrow {
+            font-size: 7em;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: opacity 0.2s ease-in-out;
+        }
 
-/*animals details*/
-.column1 {
-  float: left;
-  width: 30%;
-  padding: 10px;
-  height: 700px; 
-}
+        .slideshowArrow:hover {
+            opacity: 0.75;
+        }
 
-.row1:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/*hover button*/
+        #leftArrow {
+            position: absolute;
+            left: 4%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #rightArrow {
+            position: absolute;
+            right: 4%;
+            top: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .slideshowCircles {
+            position: absolute;
+            bottom: 2%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .circle {
+            display: inline-block;
+            margin-left: 3px;
+            margin-right: 3px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: solid 2px rgba(255, 255, 255, 0.5);
+            transition: 1s ease-in-out;
+        }
+
+        .dot {
+            background-color: rgba(255, 255, 255, 0.7);
+            border: solid 2px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Button Styles */
+        .buttons {
+            margin-top: 50px;
+            text-align: center;
+            border-radius: 30px;
+        }
+
+        ./*hover button*/
 .buttons {
   margin-top: 50px;
   text-align: center;
@@ -335,6 +317,71 @@
     transform: translateZ(0) scale(1.4);
   }
 }
+        /* Status Table Styles */
+        .table {
+            text-align: center;
+            width: 100%;
+        }
+
+        .table table {
+            width: 100%;
+        }
+
+          .table img {
+             width: 80%; /* Adjust the image width as needed */
+             max-width: 100%;
+         }
+
+        .table td {
+            padding: 10px;
+        }
+
+        /* Column Styles for Additional Details Section */
+        .column1 {
+            float: left;
+            width: 30%;
+            padding: 10px;
+            height: auto;
+        }
+
+        .row1:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    /* Styles for mobile screens */
+    .container {
+        margin-left: 5%;
+    }
+
+    .row1 {
+        display: block;
+    }
+
+    /* Add more styles for mobile screens as needed */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Styles for tablets */
+    .container {
+        margin-left: 10%;
+    }
+
+    /* Add more styles for tablets as needed */
+}
+
+@media only screen and (min-width: 769px) {
+    /* Styles for laptops and larger screens */
+    .container {
+        margin-left: 15%;
+    }
+
+    /* Add more styles for laptops as needed */
+}
+
 </style>
 </head>
 <body>
@@ -455,18 +502,33 @@ var imageSlideshowInterval = setInterval(slideshow, 4000);
   </script>
 
 <br>
-<img src="../images/status.jpg" style="width: 100%;">
-<br><br><br><br><br><br>
-<img style="margin-left: 13%;" src="../images/mammals.jpg">
-<img src="../images/threatened.jpg" style="size: 100%;">
-<a href="../Habitat/bear habitat.html"><img src="../images/southamerica.jpg"></a>
-<p style="color: white; margin-left: 22%;">MAMMALS</p>
-<p style="color: white; margin-left: 45%; position: absolute; bottom: 1;">THREATHEND</p>
-<p style="color: white; margin-left: 73%; position: absolute; bottom:1;">SOUTH-AMERICA</p>
+<!-- Animal Status Table -->
+<div class="table">
+    <table>
+        <tr style="background-color: yellow; color: black; font-weight: bold; text-transform: capitalize;">
+            <td>type</td>
+            <td>Status</td>
+            <td>Habitat</td>
+        </tr>
+        <tr>
+            <td><img src="../images/mammals.jpg"></td>
+            <td><img src="../images/threatened.jpg"></td>
+            <td><a href="../Habitat/bear habitat.html"><img src="../images/southamerica.jpg"></a></td>
+        </tr>
+        <tr>
+            <td>
+                <p style="color: white;">MAMMALS</p>
+            </td>
+            <td>
+                <p style="color: white;">THREATHEND</p>
+            </td>
+            <td>
+                <p style="color: white;">SOUTH-AMERICA</p>
+            </td>
+        </tr>
+    </table>
+</div>
 <br><br><br>
-<!--<div style="margin-left: 15%;">
-<img src="../images/snowleo size.jpg" style="width: 275; height: 185;">
-</div>-->
 
 <div class="container" style="margin-left: 10%; cursor: pointer" >
     <div class="row" style="margin-top: 13px;">
@@ -474,7 +536,7 @@ var imageSlideshowInterval = setInterval(slideshow, 4000);
             <div class="front-card card"  style="background-color: rgb(65,120,57); height: 185px;">
                 <div class="card-image">
                     <div class="header-front"></div>
-                    <span class="card-title">
+                     <!-- UPDATED CODE--><span class="card-title" style="background-color: rgb(65,120,57);">
                         <img src="../images/bear habitat.jpg" style="width: 275px;">
                     </span>
                 </div>
@@ -502,7 +564,7 @@ var imageSlideshowInterval = setInterval(slideshow, 4000);
             <div class="front-card card"  style="background-color: rgb(65,120,57); height: 185px;">
                 <div class="card-image">
                     <div class="header-front"></div>
-                    <span class="card-title">
+                   <!-- UPDATED CODE--><span class="card-title" style="background-color: rgb(65,120,57);">
                         <img src="../images/bear diet.jpg" style="width: 275px;">
                     </span>
                 </div>
