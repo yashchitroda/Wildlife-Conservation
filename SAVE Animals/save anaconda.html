@@ -1,78 +1,155 @@
 <!DOCTYPE html>
-<html>
-	<title>SAVE ANACONDA</title>
+<html lang="en">
 
 <head>
-	<style>
-/* external css: flickity.css */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVE ANACONDA</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-* {
- box-sizing: border-box;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: blue; 
+            margin: 10px 10px 10px 10px;
+            padding: 0;
+        }
 
-body { 
-  font-family: sans-serif;
-  background-color: rgb(16,64,299);
-}
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+        }
 
-.carousel {
-  background: rgb(16,64,299);
-  margin-top: 20%;
-}
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto; /* Center-align image */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add box shadow for a subtle effect */
+        }
 
-.carousel-cell {
-  width: 75%;
-  height: 600px;
-  margin-right: 10px;
-  background: #333;
-}
+        .summary {
+            font-size: 18px;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
 
-.carousel-cell-image {
-  display: block;
-  width: 950px;
-  height: 400px;
-  margin: 0 auto;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
-}
+        .overview {
+            text-align: left; 
+            margin-top: 20px;
+            color: #fff;
+        }
 
-/* fade in lazy loaded image */
-.carousel-cell-image.flickity-lazyloaded,
-.carousel-cell-image.flickity-lazyerror {
-  opacity: 1;
-}
-/* overview */
-.container {
-        display: flex;
-      }
-      
-      .image {
-        flex-basis: 12%;
-      }
-      .text {
-        font-size: 28px;
-        color: white;
+        .container {
+            display: flex;
+            
+            margin: 10px 0;
+        }
 
-      }
-      a{
-        color: white;
-        text-decoration: none;
-      }
-</style>
+        .image img {
+            height: 120px;
+            width: 120px;
+            vertical-align: top;
+            
+        }
 
-  <!--CSS... -->
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        .text {
+            font-size: 18px;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+        .carousel {
+            background: transparent;
+            margin-top: 20px;
+        }
+
+        .carousel-cell {
+            width: 800px;
+            height: 600px;
+            margin-right: 10px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-cell-image {
+            
+            max-width: 750px;
+            max-height: 450px;
+            opacity: 0;
+            margin: 10px auto; /* Center-align image */
+            transition: opacity 0.4s;
+            border-radius: 10px;
+        }
+
+        /* fade in lazy loaded image */
+        .carousel-cell-image.flickity-lazyloaded,
+        .carousel-cell-image.flickity-lazyerror {
+            opacity: 1;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .image img {
+                margin-bottom: 10px;
+            }
+
+            .carousel-cell {
+                width: 600px;
+                height: 400px;
+            }
+
+            .carousel-cell-image {
+                width: 90%;
+                height: 60%;
+            }
+        }
+
+        @media screen and (max-width: 568px) {
+            .carousel-cell {
+                width: 500px;
+                height: 350px;
+            }
+
+            .carousel-cell-image {
+                width: 90%;
+                height: 60%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <!-- Javascript... -->
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-</head>
 
-<h1 align="center">ANACONDA</h1>
-<img src="../images/anaconda.jpg">
-<h1 style="color: white;">SUMMARY</h1>
-<p style="font-size: 25px; background-color: white;">
+    <h1>SAVE ANACONDA</h1>
+
+    <img src="../images/anaconda.jpg" alt="Anaconda Image">
+
+    <h2 style="color: white;">SUMMARY</h2>
+    <div class="summary">
+      <p style="font-size: 20px; background-color: white;">
 The green anaconda is dark green in color with black oval patches on its back. This pattern blends in with the wet, dense vegetation of its habitat. The sides have similar spots with yellow centers.
 <br><br>
 The scales on its belly are yellow and black. The scales on the underside of the tail have a particular pattern, which is unique to each snake. It's a form of identification, like a human fingerprint.
@@ -85,126 +162,122 @@ Green anacondas are found in Trinidad and tropical South America, east of the An
 <br><br>
 They live in sluggish streams, rivers and adjacent swamps and marshes. While the anaconda frequents the water and is an excellent swimmer, it is very capable of moving on land and has limited climbing abilities.
 </p>
-<br><br><br><br>
-<h1>OVERVIEW</h1>
-<br><br>
-<div class="container">
-      <div class="image">
-        <img height="120px" width="120px" src="../images/near threatened.jpg" style="vertical-align: top;">
-      </div>
-      <div class="text">
-        <p><b>STATUS</b> <br> Near Threatened </p>
-      </div>
     </div>
-    <br>
-    <div class="container">
-      <div class="image">
-        <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
-      </div>
-      <div class="text">
-        <p><b>SCIENTIFIC NAME</b> <br> Eunectes murinus </p>
-      </div>
+    <br><br>
+    <h1 style="text-align: center;">OVERVIEW</h1>
+    <div class="overview">
+        <div class="container">
+            <div class="image">
+                <img src="../images/near threatened.jpg" alt="Status Image">
+            </div>
+            <div class="text">
+                <p><b>STATUS</b> <br> Near Threatened </p>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="image">
+                <img height="120px" width="120px" src="../images/name.jpg" style="vertical-align: top;">
+            </div>
+            <div class="text">
+                <p><b>SCIENTIFIC NAME</b> <br> Eunectes murinus </p>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="image">
+                <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
+            </div>
+            <div class="text">
+                <p><b>POPULATION</b> <br> 4 species </p>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="image">
+                <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
+            </div>
+            <div class="text">
+                <p><b>LENGTH</b> <br> up to 5 m (16.4 ft), with adult females, with a mean length of about 4.6 m (15.1 ft)
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="image">
+                <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
+            </div>
+            <div class="text">
+                <p><b>WEIGHT</b> <br> up to 227 kg (500 lb) </p>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="image">
+                <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
+            </div>
+            <div class="text">
+                <p><b>HABITAT</b> <br> <a href="../Habitat/anaconda habitat.html">SWAMPS</a></p>
+            </div>
+        </div>
     </div>
-      <br>
-    <div class="container">
-      <div class="image">
-        <img height="120px" width="120px" src="../images/population.jpg" style="vertical-align: top;">
-      </div>
-      <div class="text">
-        <p><b>POPULATION</b> <br> 4 species </p>
-      </div>
-    </div>
-      <br>
-      <div class="container">
-      <div class="image">
-        <img height="120px" width="120px" src="../images/length.jpg" style="vertical-align: top;">
-      </div>
-      <div class="text">
-        <p><b>LENGTH</b> <br> up to 5 m (16.4 ft), with adult females, with a mean length of about 4.6 m (15.1 ft) </p>
-      </div>
-    </div>
-    <br>
-      <div class="container">
-      <div class="image">
-        <img height="120px" width="120px" src="../images/weight.jpg" style="vertical-align: top;">
-      </div>
-      <div class="text">
-        <p><b>WEIGHT</b> <br> up to 227 kg (500 lb)  </p>
-      </div>
-    </div>
-    <br>
-      <div class="container">
-      <div class="image">
-        <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
-      </div>
-      <div class="text">
-        <p><b>HABITAT</b> <br> <a href="anaconda habitat.html">SWARMPS</a></p>
-      </div>
+
+    <br><br><br><br>
+    <div align="center">
+        <img src="../images/anaconda map.jpg" alt="Population Map Image">
+        <figcaption style="color: white; font-size: 25px;">POPULATION MAP</figcaption>
     </div>
 
-  
+    <div class="carousel" data-flickity='{ "lazyLoad": true }'>
+        <!-- Your carousel content here -->
+        <div class="carousel-cell">
+            <img class="carousel-cell-image" alt="strawberries"
+                data-flickity-lazyload-src="../images/anaconda1.jpg"
+                data-flickity-lazyload-srcset="../images/anaconda1.jpg" />
+            <h1 style="color: blue; text-align: center; font-size: 25px;">IMPORTANCE OF ANACONDA</h1>
+            <p><!--UPDATED CODE-->
+                The anaconda has several adapted traits that allow it to survive successfully in a rainforest
+                environment. Another adaptation they have is the patterns on an anaconda's body. The greenish tinge to
+                their scales and their mottled pattern make for effective camouflage which helps the anaconda hide from
+                predators.
+            </p>
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image" alt="strawberries"
+                data-flickity-lazyload-src="../images/anaconda2.jpg"
+                data-flickity-lazyload-srcset="../images/anaconda2.jpg" />
+            <p>
+                Anacondas are sometimes hunted illegally for their skin or to be sold as pets, but this is rare. Their
+                size makes them inconvenient pets, and their skin is not very popular for clothing and shoes. They are
+                also very difficult to catch.
+            </p>
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image" alt="strawberries"
+                data-flickity-lazyload-src="../images/anaconda3.jpg"
+                data-flickity-lazyload-srcset="../images/anaconda3.jpg" />
+            <p>Most of their time is spent in the water hunting. Although they use both sight and smell to hunt, they
+                also have the ability to sense heat emitted by potential prey.
+            </p>
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image" alt="strawberries"
+                data-flickity-lazyload-src="../images/anaconda4.jpg"
+                data-flickity-lazyload-srcset="../images/anaconda4.jpg" />
+            <p>Anacondas are not venomous; they use constriction instead to subdue their prey. Once an anaconda sights
+                its target, it will grab the animal in its jaws, locking it in with its teeth.
+            </p>
+        </div>
+        <div class="carousel-cell">
+            <img class="carousel-cell-image" alt="strawberries"
+                data-flickity-lazyload-src="../images/anaconda5.jpg"
+                data-flickity-lazyload-srcset="../images/anaconda5.jpg" />
+            <p>The Anaconda belongs to the boa constrictor family of snakes. It is the heaviest snake in the world, and
+                one of the longest.</p>
+        </div>
+    </div>
 
-
-<br><br><br><br>
-<div align="center">
-<img src="../images/anaconda map.jpg">
-<figcaption style="color: white; font-size: 35px;">POPULATION MAP</figcaption>
-</div>
-
-<div class="carousel"
-   data-flickity='{ "lazyLoad": true }'>
-
-
-  <div class="carousel-cell">
-    <img class="carousel-cell-image" alt="strawberries"
-      data-flickity-lazyload-src="../images/anaconda1.jpg"
-      data-flickity-lazyload-srcset="
-        ../images/anaconda1.jpg"/>
-        <h1 align="center" style="color: blue;">IMPORTANCE OF ANACONDA</h1>
-        <p style="color:white; font-size: 25px; text-align: center;">
-The anaconda has several adapted traits that allow it to survive successfully in a rainforest environment. Another adaptation they have is the patterns on an anaconda's body. The greenish tinge to their scales and their mottled pattern make for effective camouflage which helps the anaconda hide from predators.</p>
-
-
-  </div>
-  <div class="carousel-cell">
-    <img class="carousel-cell-image" alt="strawberries"
-      data-flickity-lazyload-src="../images/anaconda2.jpg"
-      data-flickity-lazyload-srcset="
-        ../images/anaconda2.jpg"/>
-                <p style="color:white; font-size: 25px; text-align: center;">
-Anacondas are sometimes hunted illegally for their skin or to be sold as pets, but this is rare. Their size makes them inconvenient pets, and their skin is not very popular for clothing and shoes. They are also very difficult to catch.</p>
-
-
-  </div>
-  <div class="carousel-cell">
-    <img class="carousel-cell-image" alt="strawberries"
-      data-flickity-lazyload-src="../images/anaconda3.jpg"
-      data-flickity-lazyload-srcset="
-        ../images/anaconda3.jpg"/>
-        <p style="color:white; font-size: 25px; text-align: center;">Most of their time is spent in the water hunting. Although they use both sight and smell to hunt, they also have the ability to sense heat emitted by potential prey. </p>
-
-
-  </div>
-  <div class="carousel-cell">
-    <img class="carousel-cell-image" alt="strawberries"
-      data-flickity-lazyload-src="../images/anaconda4.jpg"
-      data-flickity-lazyload-srcset="
-        ../images/anaconda4.jpg"/>
-        <p style="color:white; font-size: 25px; text-align: center;">Anacondas are not venomous; they use constriction instead to subdue their prey. Once an anaconda sights its target, it will grab the animal in its jaws, locking it in with its teeth.</p>
-
-
-  </div>
-  <div class="carousel-cell">
-    <img class="carousel-cell-image" alt="strawberries"
-      data-flickity-lazyload-src="../images/anaconda5.jpg"
-      data-flickity-lazyload-srcset="
-        ../images/anaconda5.jpg"/>
-       <p style="color:white; font-size: 25px; text-align: center;">The Anaconda belongs to the boa constrictor family of snakes. It is the heaviest snake in the world, and one of the longest.</p>
-  </div>
-  
-</div>
-
-
-
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
+
 </html>
