@@ -5,7 +5,7 @@
 </head>
  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
 <style>
-      /* Global Styles */
+/* Global Styles */
         body {
             background-color: rgb(214,123,42);
             height: auto;
@@ -21,6 +21,8 @@
             -moz-transform-origin: 100% center;
             -ms-transform-origin: 100% center;
             transform-origin: 100% center;
+            cursor: pointer;
+           
         }
 
         .front-card,
@@ -28,16 +30,13 @@
             -webkit-transform-style: preserve-3d;
             -moz-transform-style: preserve-3d;
             transform-style: preserve-3d;
-
             -webkit-backface-visibility: hidden;
             -moz-backface-visibility: hidden;
             backface-visibility: hidden;
-
             -o-transition: transform .6s ease-in-out;
             -moz-transition: transform .6s ease-in-out;
             -webkit-transition: transform .6s ease-in-out;
             transition: transform .6s ease-in-out;
-
             position: absolute;
             top: 0;
             left: 0;
@@ -71,7 +70,7 @@
         /* Styling for Header and Cards */
         .header-front,
         .header-back {
-            background-color: rgb(200,78,44);
+           background-color: rgb(200,78,44);
         }
 
         .card {
@@ -86,7 +85,9 @@
             font-size: 24px;
             font-weight: 300;
             text-transform: uppercase;
-            width: 275px
+            width: 275px;
+            display: block;
+            height: 185px;
         }
 
         .card .card-image {
@@ -100,8 +101,8 @@
             background-clip: padding-box;
             position: relative;
             z-index: -1;
-            width: 290px;
-            height: 400px;
+            width: 275px;
+            height: 385px;
         }
 
         .card .card-image span.card-title {
@@ -109,21 +110,19 @@
             bottom: 0;
             left: 0;
             padding: 16px;
-            width: 275px
+            width: 275px;
         }
 
-        .card .card-content {
-            padding: 16px;
-            border-radius: 0 0 2px 2px;
-            background-clip: padding-box;
-            box-sizing: border-box;
+
+        /* Container Table Styles */
+        .container-table {
+            width: 100%;
         }
 
-        .card .card-content p {
-            margin: 0;
-            color: inherit;
+        .container-table td {
+            width: 33.33%;
+            padding: 10px;
         }
-
         
 
         /* Slideshow Styles */
@@ -144,6 +143,8 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
             z-index: -1;
+            width: 60%;
+            height: 100%;
         }
 
         .visible {
@@ -206,118 +207,132 @@
             border-radius: 30px;
         }
 
-        ./*hover button*/
-.buttons {
-  margin-top: 50px;
-  text-align: center;
-  border-radius: 30px;
-}
+        .blob-btn {
+            /* Button Styling */
+            z-index: 1;
+            position: relative;
+            padding: 20px 46px;
+            margin-bottom: 30px;
+            text-align: left;
+            text-transform: uppercase;
+            color: #0505A9;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            transition: color 0.5s;
+            cursor: pointer;
+            border-radius: 30px;
+        }
 
-.blob-btn {
-  z-index: 1;
-  position: relative;
-  padding: 20px 46px;
-  margin-bottom: 30px;
-  text-align: left;
-  text-transform: uppercase;
-  color: #0505A9;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  transition: color 0.5s;
-  cursor: pointer;
-  border-radius: 30px;
-}
-.blob-btn:before {
-  content: "";
-  z-index: 1;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #0505A9;
-  border-radius: 30px;
-}
-.blob-btn:after {
-  content: "";
-  z-index: -2;
-  position: absolute;
-  left: 3px;
-  top: 3px;
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s 0.2s;
-  border-radius: 30px;
-}
-.blob-btn:hover {
-  color: #FFFFFF;
-  border-radius: 30px;
-}
-.blob-btn:hover:after {
-  transition: all 0.3s;
-  left: 0;
-  top: 0;
-  border-radius: 30px;
-}
-.blob-btn__inner {
-  z-index: -1;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background: #ffffff;
-}
-.blob-btn__blobs {
-  position: relative;
-  display: block;
-  height: 100%;
-  filter: url("#goo");
-}
-.blob-btn__blob {
-  position: absolute;
-  top: 2px;
-  width: 25%;
-  height: 100%;
-  background: orange;
-  border-radius: 100%;
-  transform: translate3d(0, 150%, 0) scale(1.7);
-  transition: transform 0.45s;
-}
-@supports (filter: url("#goo")) {
-  .blob-btn__blob {
-    transform: translate3d(0, 150%, 0) scale(1.4);
-  }
-}
-.blob-btn__blob:nth-child(1) {
-  left: 0%;
-  transition-delay: 0s;
-}
-.blob-btn__blob:nth-child(2) {
-  left: 30%;
-  transition-delay: 0.08s;
-}
-.blob-btn__blob:nth-child(3) {
-  left: 60%;
-  transition-delay: 0.16s;
-}
-.blob-btn__blob:nth-child(4) {
-  left: 90%;
-  transition-delay: 0.24s;
-}
-.blob-btn:hover .blob-btn__blob {
-  transform: translateZ(0) scale(1.7);
-}
-@supports (filter: url("#goo")) {
-  .blob-btn:hover .blob-btn__blob {
-    transform: translateZ(0) scale(1.4);
-  }
-}
+        .blob-btn:before {
+            /* Button Border */
+            content: "";
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #0505A9;
+            border-radius: 30px;
+        }
+
+        .blob-btn:after {
+            /* Button Blob Animation */
+            content: "";
+            z-index: -2;
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s 0.2s;
+            border-radius: 30px;
+        }
+
+        .blob-btn:hover {
+            color: #FFFFFF;
+            border-radius: 30px;
+        }
+
+        .blob-btn:hover:after {
+            transition: all 0.3s;
+            left: 0;
+            top: 0;
+            border-radius: 30px;
+        }
+
+        .blob-btn__inner {
+            /* Inner Blob */
+            z-index: -1;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            background: #ffffff;
+        }
+
+        .blob-btn__blobs {
+            /* Blobs Container */
+            position: relative;
+            display: block;
+            height: 100%;
+            filter: url("#goo");
+        }
+
+        .blob-btn__blob {
+            /* Individual Blobs */
+            position: absolute;
+            top: 2px;
+            width: 25%;
+            height: 100%;
+            background: orange;
+            border-radius: 100%;
+            transform: translate3d(0, 150%, 0) scale(1.7);
+            transition: transform 0.45s;
+        }
+
+        @supports (filter: url("#goo")) {
+            .blob-btn__blob {
+                transform: translate3d(0, 150%, 0) scale(1.4);
+            }
+        }
+
+        .blob-btn__blob:nth-child(1) {
+            left: 0%;
+            transition-delay: 0s;
+        }
+
+        .blob-btn__blob:nth-child(2) {
+            left: 30%;
+            transition-delay: 0.08s;
+        }
+
+        .blob-btn__blob:nth-child(3) {
+            left: 60%;
+            transition-delay: 0.16s;
+        }
+
+        .blob-btn__blob:nth-child(4) {
+            left: 90%;
+            transition-delay: 0.24s;
+        }
+
+        .blob-btn:hover .blob-btn__blob {
+            transform: translateZ(0) scale(1.7);
+        }
+
+        @supports (filter: url("#goo")) {
+            .blob-btn:hover .blob-btn__blob {
+                transform: translateZ(0) scale(1.4);
+            }
+        }
+
         /* Status Table Styles */
         .table {
             text-align: center;
@@ -354,8 +369,8 @@
 /* Media Queries */
 @media only screen and (max-width: 600px) {
     /* Styles for mobile screens */
-    .container {
-        margin-left: 5%;
+    .container-table {
+        margin-left: 0%;
     }
 
     .row1 {
@@ -367,22 +382,25 @@
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     /* Styles for tablets */
-    .container {
+    .container-table {
         margin-left: 10%;
     }
+   
 
     /* Add more styles for tablets as needed */
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
     /* Styles for laptops and larger screens */
-    .container {
-        margin-left: 15%;
+    
+    .flipper{
+       margin-left: 20% ;
+
     }
+    
 
     /* Add more styles for laptops as needed */
 }
-
 </style></head>
 <body>
 
@@ -390,7 +408,7 @@
   
 <!-- Replace the image 'src' with the images in your project.
 Javascript is set up so that you can add as many images as you like, but make sure that you match the number of 'circle' span elements (below) to the number of images -->
-  <img class="imageSlides" src="../images/armadillo.jpg">
+  <img class="imageSlides" style="height: 100%; width: 100%;"src="../images/armadillo.jpg">
   <img class="imageSlides" style="height: 100%; width: 100%;" src="../images/armadillo1.jpg">
   <img class="imageSlides" style="height: 100%; width: 100%;" src="../images/armadillo2.jpg">
   <img class="imageSlides" style="height: 100%; width: 100%;" src="../images/armadillo3.jpg">
@@ -530,67 +548,73 @@ var imageSlideshowInterval = setInterval(slideshow, 4000);
         </tr>
     </table>
 </div>
-<br><br><br>
+<br><br>
+<!--FLIP CARD TABLE-->
+   <table class="container-table">
+        <tr>
+            <td>
+                <!-- Habitat Information Card -->
+                <div class="flipper">
+                    <div class="front-card card" style="background-color: rgb(214,123,42); height: 185px;">
+                        <div class="card-image">
+                            <div class="header-front">  <img src="../images/armadillo habitat.jpg" style="width: 275px; height: 385px; "></div> 
+                        </div>
+                    </div>
+                    <div class="back-card card" style="background-color: rgb(200,78,44);; ">
+                        <div class="card-image">
+                            <div class="header-back">
+                                <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 25px;">three-banded armadillos includes parts of Bolivia, Brazil, Paraguay and Argentina. They live in open, grassy areas, open forests and marshes. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
 
+            <td>
+                <!-- Diet Information Card -->
+                <div class="flipper">
+                    <div class="front-card card" style="background-color: rgb(214,123,42); height: 185px;">
+                        <div class="card-image">
+                            <div class="header-front">  <img src="../images/armadillo diet.jpg" style="width: 275px; height: 385px; "></div> 
+                        </div>
+                    </div>
+                    <div class="back-card card" style="background-color: rgb(200,78,44); ">
+                        <div class="card-image">
+                            <div class="header-back">
+                                <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 25px;">In the wild they feed primarily on ants and termites, which they obtain using their powerful forelegs and claws.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
 
-<div class="container" style="margin-left: 10%; cursor: pointer" >
-    <div class="row" style="margin-top: 13px;">
-        <div class="flipper col-md-6 col-md-offset-3">
-            <div class="front-card card"  style="background-color: rgb(214,123,42); height: 185px;">
-                <div class="card-image">
-                    <div class="header-front"></div>
-                   <!-- UPDATED CODE--><span class="card-title" style="background-color: rgb(214,123,42);">
-                        <img src="../images/armadillo habitat.jpg" style="width: 275px;">
-                    </span>
-                </div>
-              
-            </div>
-            <div class="back-card card"  style="background-color: rgb(200,78,44); height: 185px;">
-                <div class="card-image">
-                    <div class="header-back">
-                    <p align="center" style=" text-transform: capitalize; color: white; font-size: 25px;"> three-banded armadillos includes parts of Bolivia, Brazil, Paraguay and Argentina. They live in open, grassy areas, open forests and marshes. </p>
-                </div>
-
-                </div>
-                <div class="card-content">
-                 <button style="padding: 2%; background-color: orange; color: white; border-radius: 30px; border-style: dashed; font-size: 20px; cursor: pointer;"  onclick="document.location='../Habitat/armadillo habitat.html'">VIEW ARMADILLO'S HABITAT</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="container" style="margin-left: 15%; cursor: pointer;" >
-    <div class="row" style="margin-top: 13px; margin-left: 30%;">
-        <div class="flipper col-md-6 col-md-offset-3">
-            <div class="front-card card"  style="background-color: rgb(214,123,42); height: 185px;">
-                <div class="card-image">
-                    <div class="header-front"></div>
-                      <!-- UPDATED CODE--><span class="card-title" style="background-color: rgb(214,123,42);">
-                        <img src="../images/armadillo diet.jpg" style="width: 275px;">
-                    </span>
-                </div>
-              
-            </div>
-            <div class="back-card card"  style="background-color: rgb(200,78,44); height: 185px;">
-                <div class="card-image">
-                    <div class="header-back">
-                    <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 28px;">In the wild they feed primarily on ants and termites, which they obtain using their powerful forelegs and claws.</p>
-                </div>
-
-                </div>
-                <div class="card-content">
             
+                <!-- Size Image -->
+                <td>
+                <!-- Diet Information Card -->
+                <div class="flipper" style="cursor: not-allowed;">
+                    <div class="front-card card" style="background-color: rgb(214,123,42); height: 185px;">
+                        <div class="card-image">
+                            <div class="header-front">  
+                                <img src="../images/armadillo size.jpg" style="width: 275px; height: 385px; ">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="back-card card" style="background-color: rgb(200,78,44); ">
+                        <div class="card-image">
+                            <div class="header-back">
+                               
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<img src="../images/armadillo size.jpg" style="height: 390px; width: 280px; margin-left: 70%;">
+            </td>
+        </tr>
+    </table>
+ <!--FLIP CARD TABLE-->
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 <div align="center">
 <div class="buttons">
   <button class="blob-btn" onclick="document.location='../SAVE Animals/save armadillo.html'" >
