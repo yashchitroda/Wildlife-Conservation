@@ -12,17 +12,18 @@
             height: auto;
         }
 
-        /* FLIP-CARD Styles */
+      /* FLIP-CARD Styles */
         .flipper {
             position: relative;
             perspective: 600px;
             -webkit-perspective: 600px;
             -moz-perspective: 600px;
-
             -webkit-transform-origin: 100% center;
             -moz-transform-origin: 100% center;
             -ms-transform-origin: 100% center;
             transform-origin: 100% center;
+            cursor: pointer;
+           
         }
 
         .front-card,
@@ -30,16 +31,13 @@
             -webkit-transform-style: preserve-3d;
             -moz-transform-style: preserve-3d;
             transform-style: preserve-3d;
-
             -webkit-backface-visibility: hidden;
             -moz-backface-visibility: hidden;
             backface-visibility: hidden;
-
             -o-transition: transform .6s ease-in-out;
             -moz-transition: transform .6s ease-in-out;
             -webkit-transition: transform .6s ease-in-out;
             transition: transform .6s ease-in-out;
-
             position: absolute;
             top: 0;
             left: 0;
@@ -70,12 +68,11 @@
             transform: rotateX(0deg);
         }
 
-        /* UPDATED CODE */
+        /* Styling for Header and Cards */
         .header-front,
         .header-back {
-            background: rgb(104,0,211);   
+            background: rgb(85,52,196);
         }
-                 /* UPDATED CODE */
 
         .card {
             margin-top: 10px;
@@ -89,7 +86,9 @@
             font-size: 24px;
             font-weight: 300;
             text-transform: uppercase;
-            width: 275px
+            width: 275px;
+            display: block;
+            height: 185px;
         }
 
         .card .card-image {
@@ -103,8 +102,8 @@
             background-clip: padding-box;
             position: relative;
             z-index: -1;
-            width: 290px;
-            height: 400px;
+            width: 275px;
+            height: 385px;
         }
 
         .card .card-image span.card-title {
@@ -112,21 +111,19 @@
             bottom: 0;
             left: 0;
             padding: 16px;
-            width: 275px
+            width: 275px;
         }
 
-        .card .card-content {
-            padding: 16px;
-            border-radius: 0 0 2px 2px;
-            background-clip: padding-box;
-            box-sizing: border-box;
+
+        /* Container Table Styles */
+        .container-table {
+            width: 100%;
         }
 
-        .card .card-content p {
-            margin: 0;
-            color: inherit;
+        .container-table td {
+            width: 33.33%;
+            padding: 10px;
         }
-
         
 
         /* Slideshow Styles */
@@ -147,6 +144,8 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
             z-index: -1;
+            width: 60%;
+            height: 100%;
         }
 
         .visible {
@@ -293,7 +292,7 @@
             top: 2px;
             width: 25%;
             height: 100%;
-            background: #0505A9;
+            background: darkblue;
             border-radius: 100%;
             transform: translate3d(0, 150%, 0) scale(1.7);
             transition: transform 0.45s;
@@ -371,8 +370,8 @@
 /* Media Queries */
 @media only screen and (max-width: 600px) {
     /* Styles for mobile screens */
-    .container {
-        margin-left: 5%;
+    .container-table {
+        margin-left: 0%;
     }
 
     .row1 {
@@ -384,18 +383,22 @@
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     /* Styles for tablets */
-    .container {
+    .container-table {
         margin-left: 10%;
     }
+   
 
     /* Add more styles for tablets as needed */
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
     /* Styles for laptops and larger screens */
-    .container {
-        margin-left: 15%;
+    
+    .flipper{
+       margin-left: 20% ;
+
     }
+    
 
     /* Add more styles for laptops as needed */
 }
@@ -551,64 +554,72 @@ var imageSlideshowInterval = setInterval(slideshow, 4000);
 </div>
 <br><br><br>
 
-<div class="container" style="margin-left: 10%; cursor: pointer" >
-    <div class="row" style="margin-top: 13px;">
-        <div class="flipper col-md-6 col-md-offset-3">
-            <div class="front-card card"  style="background-color: rgb(60,0,132); height: 185px;">
-                <div class="card-image">
-                    <div class="header-front"></div>
- <!-- UPDATED CODE--><span class="card-title" style="background-color: rgb(60,0,132);">
-                        <img src="../images/anteater habitat.jpg" style="width: 275px;">
-                    </span>
-                </div>
-              
-            </div>
-            <div class="back-card card"  style="background-color: rgb(104,0,211); height: 185px;">
-                <div class="card-image">
-                    <div class="header-back">
-                    <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 35px;">Anteater habitats include dry tropical forests, rainforests, grasslands, and savannas. </p>
-                </div>
 
+<!--FLIP CARD TABLE-->
+   <table class="container-table">
+        <tr>
+            <td>
+                <!-- Habitat Information Card -->
+                <div class="flipper">
+                    <div class="front-card card" style="background-color: rgb(60,0,132); height: 185px;">
+                        <div class="card-image">
+                            <div class="header-front">  <img src="../images/anteater habitat.jpg" style="width: 275px; height: 385px; "></div> 
+                        </div>
+                    </div>
+                    <div class="back-card card" style="background-color: rgb(85,52,196); ">
+                        <div class="card-image">
+                            <div class="header-back">
+                                <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 25px;">Anteater habitats include dry tropical forests, rainforests, grasslands, and savannas. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-content">
-                 <button style="padding: 2%; background-color: purple; color: white; border-radius: 30px; border-style: dashed; font-size: 20px; cursor: pointer;"  onclick="document.location='../Habitat/anteater habitat.html'">VIEW ANTEATER'S HABITAT</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
+            </td>
 
-<div class="container" style="margin-left: 15%; cursor: pointer;" >
-    <div class="row" style="margin-top: 13px; margin-left: 30%;">
-        <div class="flipper col-md-6 col-md-offset-3">
-            <div class="front-card card"  style="background-color: rgb(60,0,132); height: 185px;">
-                <div class="card-image">
-                    <div class="header-front"></div>
- <!-- UPDATED CODE--><span class="card-title" style="background-color: rgb(60,0,132);">
-                        <img src="../images/anteater diet.jpg" style="width: 275px;">
-                    </span>
+            <td>
+                <!-- Diet Information Card -->
+                <div class="flipper">
+                    <div class="front-card card" style="background-color: rgb(60,0,132); height: 185px;">
+                        <div class="card-image">
+                            <div class="header-front">  <img src="../images/anteater diet.jpg" style="width: 275px; height: 385px; "></div> 
+                        </div>
+                    </div>
+                    <div class="back-card card" style="background-color: rgb(85,52,196); ">
+                        <div class="card-image">
+                            <div class="header-back">
+                                <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 25px;"> In addition to ants and termites, anteaters also eat soft-bodied grubs</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              
-            </div>
-            <div class="back-card card"  style="background-color: rgb(104,0,211); height: 185px;">
-                <div class="card-image">
-                    <div class="header-back">
-                    <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; ">In addition to ants and termites, anteaters also eat soft-bodied grubs,</p>
-                </div>
+            </td>
 
-                </div>
-                <div class="card-content">
             
+                <!-- Size Image -->
+                <td>
+                <!-- Diet Information Card -->
+                <div class="flipper" style="cursor: not-allowed;">
+                    <div class="front-card card" style="background-color: rgb(60,0,132); height: 185px;">
+                        <div class="card-image">
+                            <div class="header-front">  
+                                <img src="../images/anteater size.jpg" style="width: 275px; height: 385px; ">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="back-card card" style="background-color: rgb(85,52,196); ">
+                        <div class="card-image">
+                            <div class="header-back">
+                               
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<img src="../images/anteater size.jpg" style="height: 390px; width: 280px; margin-left: 72%;">
+            </td>
+        </tr>
+    </table>
+ <!--FLIP CARD TABLE-->
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div align="center">
 <div class="buttons">
   <button class="blob-btn" onclick="document.location='../SAVE Animals/save anteater.html'" >
@@ -637,16 +648,16 @@ var imageSlideshowInterval = setInterval(slideshow, 4000);
 
 <br>
 <div class="row1" >
-  <div class="column1" style="background-color:rgb(71,0,137); margin-right: 1%;">
+  <div class="column1" style="background-color:rgb(85,52,196); margin-right: 1%;">
     <h1 style="color: yellow; text-transform: capitalize; text-align: left;">No Teeth</h1>
     <p style="color: white; font-size: 30px; text-align: left; text-align: ;">The anteater is a shy, timid mammal that will typically avoid human interaction. When threatened, the anteater has been known to seriously injure, and the giant anteater has even kill humans with its sharp, four-inch claws.Anteaters are edentate, which means they have no teeth.</p>
   </div>
-  <div class="column1" style="background-color:rgb(71,0,137);margin-right: 1%;">
+  <div class="column1" style="background-color:rgb(85,52,196);margin-right: 1%;">
     <h1 style="color: yellow;text-transform: capitalize; text-align: left;">Fast Tongue</h1>
     <p style="color: white; font-size: 30px; text-align: left;">The anteater's tongue can flick 160 times per minute. Anteaters need to eat fast to avoid painful stings from its prey. Despite the Anteater's given name, this mammal will gladly dine on ants, termites, bees, and occasionally the sweet honey of a hive. An anteater must eat thousands of insects each day to meet his dietary needs - that's about 35,000 insects each day - but it's no problem for this unique creature.
     </p>
   </div>
-  <div class="column1" style="background-color:rgb(71,0,137);margin-right: 1%;">
+  <div class="column1" style="background-color:rgb(85,52,196);margin-right: 1%;">
     <h1 style="color: yellow;text-transform: capitalize; text-align: left;">American Native</h1>
     <p style="color: white; font-size: 30px; text-align: left;">The anteater is native to South and Central America, but has been known to roam from northern Argentina to Honduras. The anteater once lived in Guatemala, Costa Rica, Belize, Uruguay, and the Andes - in fact, archaeologists have found fossil remains of the anteater as far north as Sonora, Mexico - but due to the loss of natural resources, they no longer reside in these areas of the world.</p>
   </div>
