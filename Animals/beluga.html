@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BELUGA WHALE | Fish</title>
+    <title>BELUGA WHALE | Fish</title>
 </head>
  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
 <style>
  /* Global Styles */
-        body {
+ body {
             background-color: rgb(16, 64, 299);
             height: auto;
         }
@@ -17,11 +17,12 @@
             perspective: 600px;
             -webkit-perspective: 600px;
             -moz-perspective: 600px;
-
             -webkit-transform-origin: 100% center;
             -moz-transform-origin: 100% center;
             -ms-transform-origin: 100% center;
             transform-origin: 100% center;
+            cursor: pointer;
+           
         }
 
         .front-card,
@@ -29,16 +30,13 @@
             -webkit-transform-style: preserve-3d;
             -moz-transform-style: preserve-3d;
             transform-style: preserve-3d;
-
             -webkit-backface-visibility: hidden;
             -moz-backface-visibility: hidden;
             backface-visibility: hidden;
-
             -o-transition: transform .6s ease-in-out;
             -moz-transition: transform .6s ease-in-out;
             -webkit-transition: transform .6s ease-in-out;
             transition: transform .6s ease-in-out;
-
             position: absolute;
             top: 0;
             left: 0;
@@ -87,7 +85,9 @@
             font-size: 24px;
             font-weight: 300;
             text-transform: uppercase;
-            width: 275px
+            width: 275px;
+            display: block;
+            height: 185px;
         }
 
         .card .card-image {
@@ -101,8 +101,8 @@
             background-clip: padding-box;
             position: relative;
             z-index: -1;
-            width: 290px;
-            height: 400px;
+            width: 275px;
+            height: 385px;
         }
 
         .card .card-image span.card-title {
@@ -110,21 +110,19 @@
             bottom: 0;
             left: 0;
             padding: 16px;
-            width: 275px
+            width: 275px;
         }
 
-        .card .card-content {
-            padding: 16px;
-            border-radius: 0 0 2px 2px;
-            background-clip: padding-box;
-            box-sizing: border-box;
+
+        /* Container Table Styles */
+        .container-table {
+            width: 100%;
         }
 
-        .card .card-content p {
-            margin: 0;
-            color: inherit;
+        .container-table td {
+            width: 33.33%;
+            padding: 10px;
         }
-
         
 
         /* Slideshow Styles */
@@ -145,6 +143,8 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
             z-index: -1;
+            width: 60%;
+            height: 100%;
         }
 
         .visible {
@@ -369,8 +369,8 @@
 /* Media Queries */
 @media only screen and (max-width: 600px) {
     /* Styles for mobile screens */
-    .container {
-        margin-left: 5%;
+    .container-table {
+        margin-left: 0%;
     }
 
     .row1 {
@@ -382,18 +382,22 @@
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
     /* Styles for tablets */
-    .container {
+    .container-table {
         margin-left: 10%;
     }
+   
 
     /* Add more styles for tablets as needed */
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1024px) {
     /* Styles for laptops and larger screens */
-    .container {
-        margin-left: 15%;
+    
+    .flipper{
+       margin-left: 20% ;
+
     }
+    
 
     /* Add more styles for laptops as needed */
 }
@@ -546,65 +550,71 @@ var imageSlideshowInterval = setInterval(slideshow, 4000);
 
 <br><br><br>
 
+<!--FLIP CARD TABLE-->
+   <table class="container-table">
+        <tr>
+            <td>
+                <!-- Habitat Information Card -->
+                <div class="flipper">
+                    <div class="front-card card" style="background-color: rgb(16,64,299); height: 185px;">
+                        <div class="card-image">
+                            <div class="header-front">  <img src="../images/beluga habitat.jpg" style="width: 275px; height: 385px; "></div> 
+                        </div>
+                    </div>
+                    <div class="back-card card" style="background-color: rgb(5,102,246); ">
+                        <div class="card-image">
+                            <div class="header-back">
+                                <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 25px;">Belugas inhabit a very wide variety of habitats. They are found in frigid Arctic and sub-Artic seas almost worldwide.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
 
-<div class="container" style="margin-left: 10%; cursor: pointer" >
-    <div class="row" style="margin-top: 13px;">
-        <div class="flipper col-md-6 col-md-offset-3">
-            <div class="front-card card"  style="background-color: rgb(16,64,299); height: 185px;">
-                <div class="card-image">
-                    <div class="header-front"></div>
-                    <span class="card-title" style="background-color: rgb(16,64,299);">
-                        <img src="../images/beluga habitat.jpg" style="width: 275px;">
-                    </span>
+            <td>
+                <!-- Diet Information Card -->
+                <div class="flipper">
+                    <div class="front-card card" style="background-color: rgb(16,64,299); height: 185px;">
+                        <div class="card-image">
+                            <div class="header-front">  <img src="../images/beluga diet.jpg" style="width: 275px; height: 385px; "></div> 
+                        </div>
+                    </div>
+                    <div class="back-card card" style="background-color: rgb(5,102,246); ">
+                        <div class="card-image">
+                            <div class="header-back">
+                                <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 25px;">most commonly captured prey species includes Arctic cod, Pacific salmon, red perch, Greenland halibut, northern shrimp, capelin, smelt, and more. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              
-            </div>
-            <div class="back-card card"  style="background-color: rgb(5,102,246); height: 185px;">
-                <div class="card-image">
-                    <div class="header-back">
-                    <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; ">Belugas inhabit a very wide variety of habitats. They are found in frigid Arctic and sub-Artic seas almost worldwide.</p>
-                </div>
+            </td>
 
-                </div>
-                <div class="card-content">
-                 <button style="padding: 2%; background-color: darkblue; color: white; border-radius: 30px; border-style: dashed; font-size: 20px; cursor: pointer;"  onclick="document.location='../Habitat/beluga habitat.html'">VIEW BELUGA'S HABITAT</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<div class="container" style="margin-left: 15%; cursor: pointer;" >
-    <div class="row" style="margin-top: 13px; margin-left: 30%;">
-        <div class="flipper col-md-6 col-md-offset-3">
-            <div class="front-card card"  style="background-color: rgb(16,64,299); height: 185px;">
-                <div class="card-image">
-                    <div class="header-front"></div>
-                    <span class="card-title" style="background-color: rgb(16,64,299);">
-                        <img src="../images/beluga diet.jpg" style="width: 275px;">
-                    </span>
-                </div>
-              
-            </div>
-            <div class="back-card card"  style="background-color: rgb(5,102,246); height: 185px;">
-                <div class="card-image">
-                    <div class="header-back">
-                    <p align="center" style="font-size: 25px; text-transform: capitalize; color: white; font-size: 28px;">most commonly captured prey species includes Arctic cod, Pacific salmon, red perch, Greenland halibut, northern shrimp, capelin, smelt, and more. </p>
-                </div>
-
-                </div>
-                <div class="card-content">
             
+                <!-- Size Image -->
+                <td>
+                <!-- Diet Information Card -->
+                <div class="flipper" style="cursor: not-allowed;">
+                    <div class="front-card card" style="background-color: rgb(16,64,299); height: 185px;">
+                        <div class="card-image">
+                            <div class="header-front">  
+                                <img src="../images/beluga size.jpg" style="width: 275px; height: 385px; ">
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="back-card card" style="background-color: rgb(5,102,246); ">
+                        <div class="card-image">
+                            <div class="header-back">
+                               
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<img src="../images/beluga size.jpg" style="height: 390px; width: 280px; margin-left: 72%;">
+            </td>
+        </tr>
+    </table>
+ <!--FLIP CARD TABLE-->
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div align="center">
 <div class="buttons">
   <button class="blob-btn" onclick="document.location='../SAVE Animals/save beluga.html'" >
