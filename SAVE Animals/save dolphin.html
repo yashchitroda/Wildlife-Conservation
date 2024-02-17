@@ -1,77 +1,163 @@
 <!DOCTYPE html>
 <html>
-	<title>SAVE dolphin</title>
+ <title>SAVE DOLPHIN</title>
 
 <head>
-	<style>
-/* external css: flickity.css */
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   
+        * {
+            box-sizing: border-box;
+        }
 
-* {
- box-sizing: border-box;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: blue; 
+            margin: 10px 10px 10px 10px;
+            padding: 0;
+        }
 
-body { 
-  font-family: sans-serif;
-  background-color: rgb(16,64,299);
-}
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+        }
 
-.carousel {
-  background-color: rgb(16,64,299);
-  margin-top: 20%;
-}
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto; /* Center-align image */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add box shadow for a subtle effect */
+        }
 
-.carousel-cell {
-  width: 75%;
-  height: 600px;
-  margin-right: 10px;
-  background: #333;
-}
+        .summary {
+            font-size: 18px;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
 
-.carousel-cell-image {
-  display: block;
-  width: 950px;
-  height: 400px;
-  margin: 0 auto;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
-}
+        .overview {
+            text-align: left; 
+            margin-top: 20px;
+            color: #fff;
+        }
 
-/* fade in lazy loaded image */
-.carousel-cell-image.flickity-lazyloaded,
-.carousel-cell-image.flickity-lazyerror {
-  opacity: 1;
-}
-/* overview */
-.container {
-        display: flex;
-      }
-      
-      .image {
-        flex-basis: 12%;
-      }
-      .text {
-        font-size: 28px;
-        color: white;
+        .container {
+            display: flex;
+            
+            margin: 10px 0;
+        }
 
-      }
-      a{
-        color: white;
-        text-decoration: none;
-      }
+        .image img {
+            height: 120px;
+            width: 120px;
+            vertical-align: top;
+            
+        }
+
+        .text {
+            font-size: 18px;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+        .carousel {
+            background: transparent;
+            margin-top: 20px;
+        }
+
+        .carousel-cell {
+            width: 800px;
+            height: 600px;
+            margin-right: 10px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .carousel-cell-image {
+            
+            max-width: 750px;
+            max-height: 450px;
+            opacity: 0;
+            margin: 10px auto; /* Center-align image */
+            transition: opacity 0.4s;
+            border-radius: 10px;
+        }
+
+        /* fade in lazy loaded image */
+        .carousel-cell-image.flickity-lazyloaded,
+        .carousel-cell-image.flickity-lazyerror {
+            opacity: 1;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .image img {
+                margin-bottom: 10px;
+            }
+
+            .carousel-cell {
+                width: 600px;
+                height: 400px;
+            }
+
+            .carousel-cell-image {
+                width: 90%;
+                height: 60%;
+            }
+        }
+
+        @media screen and (max-width: 568px) {
+            .carousel-cell {
+                width: 500px;
+                height: 350px;
+            }
+
+            .carousel-cell-image {
+                width: 90%;
+                height: 60%;
+            }
+        }
+        a{
+          color: pink;
+          font-style: bold;
+          text-decoration: underline;
+        }
 </style>
 
   <!--CSS... -->
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+ 
 </head>
 <body>
   <!-- Javascript... -->
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 
-<h1 align="center">DOLPHIN</h1>
-<img src="../images/dolphin.jpg" width="100%">
+  <h1 align="center">SAVE DOLPHIN</h1>
+<img src="../images/dolphin.jpg" alt="Dolphin Image" width="100%" height="540px">
 <h1 style="color: white;">SUMMARY</h1>
+<div class="summary">
 <p style="font-size: 25px; background-color: white;">
   Dolphins are highly intelligent marine mammals and are part of the family of toothed whales that includes orcas and pilot whales.
  <br><br>
@@ -86,6 +172,7 @@ Other characteristics of dolphins that make them mammals rather than fish are th
 
 <br><br>
 </p>
+</div>
 <br><br><br><br>
 <h1>OVERVIEW</h1>
 <br><br>
@@ -139,12 +226,9 @@ Other characteristics of dolphins that make them mammals rather than fish are th
         <img height="120px" width="120px" src="../images/habitat.jpg" style="vertical-align: top;">
       </div>
       <div class="text">
-        <p><b>HABITAT</b> <br> <a href="dolphin habitat.html">OCEANS</a></p>
+        <p><b>HABITAT</b> <br> <a href="../Habitat/dolphin habitat.html">OCEANS</a></p>
       </div>
     </div>
-
-  
-
 
 <br><br><br><br>
 <div align="center">
@@ -162,8 +246,8 @@ Other characteristics of dolphins that make them mammals rather than fish are th
       data-flickity-lazyload-srcset="
         ../images/dolphin1.jpg"/>
         <h1 align="center" style="color: lightblue;">IMPORTANCE OF DOLPHIN</h1>
-        <p style="color:white; font-size: 25px; text-align: center;">
-TDolphins play an important role in keeping their environment in balance. They eat other animals – mainly fish and squid – and are themselves a source of food for some sharks and other creatures. Without dolphins, the animals they prey on would increase in number, and their predators wouldn't have as much to eat.</p>
+        <p >
+Dolphins play an important role in keeping their environment in balance. They eat other animals – mainly fish and squid – and are themselves a source of food for some sharks and other creatures. Without dolphins, the animals they prey on would increase in number, and their predators wouldn't have as much to eat.</p>
 
 
   </div>
@@ -172,7 +256,7 @@ TDolphins play an important role in keeping their environment in balance. They e
       data-flickity-lazyload-src="../images/dolphin2.jpg"
       data-flickity-lazyload-srcset="
         ../images/dolphin2.jpg"/>
-                <p style="color:white; font-size: 25px; text-align: center;">
+                <p >
 Dolphins are found in all the oceans of the world. Some live mainly along coastlines, but others live far out at sea.
 Dolphins work together to eat. They can herd schools of fish for group feeding. Some even use their clicking sounds for herding the fish. </p>
 
@@ -183,7 +267,7 @@ Dolphins work together to eat. They can herd schools of fish for group feeding. 
       data-flickity-lazyload-src="../images/dolphin3.jpg"
       data-flickity-lazyload-srcset="
         ../images/dolphin3.jpg"/>
-        <p style="color:white; font-size: 25px; text-align: center;">Dolphins live and play in schools of five to hundreds of animals. Some can swim and roll in formation, just like synchronized swimmers. Dolphins also work together to help when one animal is sick, hurt, or giving birth. </p>
+        <p >Dolphins live and play in schools of five to hundreds of animals. Some can swim and roll in formation, just like synchronized swimmers. Dolphins also work together to help when one animal is sick, hurt, or giving birth. </p>
 
 
   </div>
@@ -192,7 +276,7 @@ Dolphins work together to eat. They can herd schools of fish for group feeding. 
       data-flickity-lazyload-src="../images/dolphin4.jpg"
       data-flickity-lazyload-srcset="
         ../images/dolphin4.jpg"/>
-        <p style="color:white; font-size: 25px; text-align: center;">In 2000, many countries joined the International Dolphin Conservation Program, which is an international agreement to reduce the numbers of dolphins that are lost through tuna fishing. </p>
+        <p >In 2000, many countries joined the International Dolphin Conservation Program, which is an international agreement to reduce the numbers of dolphins that are lost through tuna fishing. </p>
 
 
   </div>
@@ -201,12 +285,13 @@ Dolphins work together to eat. They can herd schools of fish for group feeding. 
       data-flickity-lazyload-src="../images/dolphin5.jpg"
       data-flickity-lazyload-srcset="
         ../images/dolphin5.jpg"/>
-       <p style="color:white; font-size: 25px; text-align: center;"> Hunting, pollution, and human development  along coastlines and rivers have seriously impacted some dolphin populations. Dams, habitat loss, and fishing nets are also hurting dolphins. </p>
+       <p > Hunting, pollution, and human development  along coastlines and rivers have seriously impacted some dolphin populations. Dams, habitat loss, and fishing nets are also hurting dolphins. </p>
   </div>
   
 </div>
 
 
-
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
+
 </html>
